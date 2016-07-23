@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 using MaterialSkin;
+using DevExpress.XtraEditors;
 
 namespace BookVeTau
 {
     public partial class MainForm : MaterialForm
     {
         MaterialSkin.MaterialSkinManager materialSkinManager;
+        F100_So_do_tau m_f_so_do_tau;
         F200_Book_ve m_f_book_ve;
+
         public MainForm()
         {
             InitializeComponent();
@@ -50,6 +53,22 @@ namespace BookVeTau
                     break;
                 default:
                     break;
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                m_f_so_do_tau = new F100_So_do_tau();
+                m_f_so_do_tau.TopLevel = false;
+                m_tab_so_do_tau.Controls.Add(m_f_so_do_tau);
+                m_f_so_do_tau.Dock = DockStyle.Fill;
+                m_f_so_do_tau.Show();
+            }
+            catch (Exception v_e)
+            {
+                XtraMessageBox.Show(v_e.Message);
             }
         }
     }

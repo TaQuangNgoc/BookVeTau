@@ -148,6 +148,7 @@
             this.Name = "MainForm";
             this.Text = "Quản lý book vé tàu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.materialTabControl1.ResumeLayout(false);

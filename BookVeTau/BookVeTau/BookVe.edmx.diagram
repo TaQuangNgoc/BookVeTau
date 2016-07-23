@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5514f86ed1974159a50dc582ffe12fd1" Name="Diagram1">
+        <EntityTypeShape EntityType="BOOK_VE_TAUModel.CM_DM_TU_DIEN" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BOOK_VE_TAUModel.DM_LOAI_TU_DIEN" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BOOK_VE_TAUModel.GD_BOOK_VE" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BOOK_VE_TAUModel.GD_BOOK_VE_DETAIL" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BOOK_VE_TAUModel.V_SO_DO_TAU" Width="1.5" PointX="4.9770324961175358" PointY="13.899844369804415" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

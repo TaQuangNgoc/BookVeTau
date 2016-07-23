@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BOOK_VE_TAUModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="BOOK_VE_TAUModelStoreContainer">
+          <EntitySet Name="CM_DM_TU_DIEN" EntityType="BOOK_VE_TAUModel.Store.CM_DM_TU_DIEN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DM_LOAI_TU_DIEN" EntityType="BOOK_VE_TAUModel.Store.DM_LOAI_TU_DIEN" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GD_BOOK_VE" EntityType="BOOK_VE_TAUModel.Store.GD_BOOK_VE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GD_BOOK_VE_DETAIL" EntityType="BOOK_VE_TAUModel.Store.GD_BOOK_VE_DETAIL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="V_SO_DO_TAU" EntityType="BOOK_VE_TAUModel.Store.V_SO_DO_TAU" store:Type="Views" store:Schema="dbo" store:Name="V_SO_DO_TAU">
+            <DefiningQuery>SELECT 
+      [V_SO_DO_TAU].[GHE_SO] AS [GHE_SO], 
+      [V_SO_DO_TAU].[TEN_CONG_TY] AS [TEN_CONG_TY], 
+      [V_SO_DO_TAU].[CAP_CHO] AS [CAP_CHO], 
+      [V_SO_DO_TAU].[ID] AS [ID], 
+      [V_SO_DO_TAU].[ID_TOA] AS [ID_TOA], 
+      [V_SO_DO_TAU].[NGAY_DAT] AS [NGAY_DAT], 
+      [V_SO_DO_TAU].[NGAY_DI] AS [NGAY_DI], 
+      [V_SO_DO_TAU].[NGAY_VE] AS [NGAY_VE], 
+      [V_SO_DO_TAU].[ID_CHIEU] AS [ID_CHIEU]
+      FROM [dbo].[V_SO_DO_TAU] AS [V_SO_DO_TAU]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="CM_DM_TU_DIEN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_LOAI_TU_DIEN" Type="decimal" />
+          <Property Name="MA_TU_DIEN" Type="ntext" />
+          <Property Name="TEN_TU_DIEN" Type="ntext" />
+        </EntityType>
+        <EntityType Name="DM_LOAI_TU_DIEN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MA_LOAI_TU_DIEN" Type="nvarchar" MaxLength="100" />
+          <Property Name="TEN_LOAI_TU_DIEN" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="GD_BOOK_VE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_CONG_TY" Type="nvarchar" MaxLength="500" />
+          <Property Name="SO_VE" Type="decimal" />
+          <Property Name="ID_CHIEU" Type="decimal" />
+          <Property Name="GIA_VE" Type="numeric" Scale="3" />
+          <Property Name="NGAY_DI" Type="datetime" />
+          <Property Name="NGAY_VE" Type="datetime" />
+          <Property Name="ID_TAI_KHOAN" Type="decimal" />
+          <Property Name="MA_PHIEU_THU" Type="nvarchar" MaxLength="500" />
+          <Property Name="CAP_CHO_YN" Type="nvarchar" MaxLength="1" />
+          <Property Name="VIP_YN" Type="nvarchar" MaxLength="1" />
+          <Property Name="NGAY_DAT" Type="datetime" />
+          <Property Name="EMAIL" Type="ntext" />
+          <Property Name="GHI_CHU" Type="ntext" />
+        </EntityType>
+        <EntityType Name="GD_BOOK_VE_DETAIL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_GD_BOOK_VE" Type="decimal" />
+          <Property Name="ID_TOA" Type="decimal" />
+          <Property Name="GHE_SO" Type="decimal" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'BOOK_VE_TAU.dbo.V_SO_DO_TAU' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="V_SO_DO_TAU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="GHE_SO" Type="decimal" />
+          <Property Name="TEN_CONG_TY" Type="nvarchar" MaxLength="500" />
+          <Property Name="CAP_CHO" Type="nvarchar" MaxLength="20" />
+          <Property Name="ID" Type="decimal" Nullable="false" />
+          <Property Name="ID_TOA" Type="decimal" />
+          <Property Name="NGAY_DAT" Type="datetime" />
+          <Property Name="NGAY_DI" Type="datetime" />
+          <Property Name="NGAY_VE" Type="datetime" />
+          <Property Name="ID_CHIEU" Type="decimal" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BOOK_VE_TAUModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BookVeEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="CM_DM_TU_DIEN" EntityType="BOOK_VE_TAUModel.CM_DM_TU_DIEN" />
+          <EntitySet Name="DM_LOAI_TU_DIEN" EntityType="BOOK_VE_TAUModel.DM_LOAI_TU_DIEN" />
+          <EntitySet Name="GD_BOOK_VE" EntityType="BOOK_VE_TAUModel.GD_BOOK_VE" />
+          <EntitySet Name="GD_BOOK_VE_DETAIL" EntityType="BOOK_VE_TAUModel.GD_BOOK_VE_DETAIL" />
+          <EntitySet Name="V_SO_DO_TAU" EntityType="BOOK_VE_TAUModel.V_SO_DO_TAU" />
+        </EntityContainer>
+        <EntityType Name="CM_DM_TU_DIEN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_LOAI_TU_DIEN" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_TU_DIEN" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TEN_TU_DIEN" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DM_LOAI_TU_DIEN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MA_LOAI_TU_DIEN" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="TEN_LOAI_TU_DIEN" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="GD_BOOK_VE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_CONG_TY" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="SO_VE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_CHIEU" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="GIA_VE" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="NGAY_DI" Type="DateTime" Precision="3" />
+          <Property Name="NGAY_VE" Type="DateTime" Precision="3" />
+          <Property Name="ID_TAI_KHOAN" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="MA_PHIEU_THU" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CAP_CHO_YN" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="VIP_YN" Type="String" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="NGAY_DAT" Type="DateTime" Precision="3" />
+          <Property Name="EMAIL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="GHI_CHU" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="GD_BOOK_VE_DETAIL">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_GD_BOOK_VE" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_TOA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="GHE_SO" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="V_SO_DO_TAU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Decimal" Name="GHE_SO" Precision="18" Scale="0" />
+          <Property Type="String" Name="TEN_CONG_TY" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAP_CHO" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="ID_TOA" Precision="18" Scale="0" />
+          <Property Type="DateTime" Name="NGAY_DAT" Precision="3" />
+          <Property Type="DateTime" Name="NGAY_DI" Precision="3" />
+          <Property Type="DateTime" Name="NGAY_VE" Precision="3" />
+          <Property Type="Decimal" Name="ID_CHIEU" Precision="18" Scale="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BOOK_VE_TAUModelStoreContainer" CdmEntityContainer="BookVeEntities">
+          <EntitySetMapping Name="CM_DM_TU_DIEN">
+            <EntityTypeMapping TypeName="BOOK_VE_TAUModel.CM_DM_TU_DIEN">
+              <MappingFragment StoreEntitySet="CM_DM_TU_DIEN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_LOAI_TU_DIEN" ColumnName="ID_LOAI_TU_DIEN" />
+                <ScalarProperty Name="MA_TU_DIEN" ColumnName="MA_TU_DIEN" />
+                <ScalarProperty Name="TEN_TU_DIEN" ColumnName="TEN_TU_DIEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DM_LOAI_TU_DIEN">
+            <EntityTypeMapping TypeName="BOOK_VE_TAUModel.DM_LOAI_TU_DIEN">
+              <MappingFragment StoreEntitySet="DM_LOAI_TU_DIEN">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="MA_LOAI_TU_DIEN" ColumnName="MA_LOAI_TU_DIEN" />
+                <ScalarProperty Name="TEN_LOAI_TU_DIEN" ColumnName="TEN_LOAI_TU_DIEN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GD_BOOK_VE">
+            <EntityTypeMapping TypeName="BOOK_VE_TAUModel.GD_BOOK_VE">
+              <MappingFragment StoreEntitySet="GD_BOOK_VE">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TEN_CONG_TY" ColumnName="TEN_CONG_TY" />
+                <ScalarProperty Name="SO_VE" ColumnName="SO_VE" />
+                <ScalarProperty Name="ID_CHIEU" ColumnName="ID_CHIEU" />
+                <ScalarProperty Name="GIA_VE" ColumnName="GIA_VE" />
+                <ScalarProperty Name="NGAY_DI" ColumnName="NGAY_DI" />
+                <ScalarProperty Name="NGAY_VE" ColumnName="NGAY_VE" />
+                <ScalarProperty Name="ID_TAI_KHOAN" ColumnName="ID_TAI_KHOAN" />
+                <ScalarProperty Name="MA_PHIEU_THU" ColumnName="MA_PHIEU_THU" />
+                <ScalarProperty Name="CAP_CHO_YN" ColumnName="CAP_CHO_YN" />
+                <ScalarProperty Name="VIP_YN" ColumnName="VIP_YN" />
+                <ScalarProperty Name="NGAY_DAT" ColumnName="NGAY_DAT" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="GHI_CHU" ColumnName="GHI_CHU" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GD_BOOK_VE_DETAIL">
+            <EntityTypeMapping TypeName="BOOK_VE_TAUModel.GD_BOOK_VE_DETAIL">
+              <MappingFragment StoreEntitySet="GD_BOOK_VE_DETAIL">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ID_GD_BOOK_VE" ColumnName="ID_GD_BOOK_VE" />
+                <ScalarProperty Name="ID_TOA" ColumnName="ID_TOA" />
+                <ScalarProperty Name="GHE_SO" ColumnName="GHE_SO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="V_SO_DO_TAU">
+            <EntityTypeMapping TypeName="BOOK_VE_TAUModel.V_SO_DO_TAU">
+              <MappingFragment StoreEntitySet="V_SO_DO_TAU">
+                <ScalarProperty Name="ID_CHIEU" ColumnName="ID_CHIEU" />
+                <ScalarProperty Name="NGAY_VE" ColumnName="NGAY_VE" />
+                <ScalarProperty Name="NGAY_DI" ColumnName="NGAY_DI" />
+                <ScalarProperty Name="NGAY_DAT" ColumnName="NGAY_DAT" />
+                <ScalarProperty Name="ID_TOA" ColumnName="ID_TOA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CAP_CHO" ColumnName="CAP_CHO" />
+                <ScalarProperty Name="TEN_CONG_TY" ColumnName="TEN_CONG_TY" />
+                <ScalarProperty Name="GHE_SO" ColumnName="GHE_SO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
