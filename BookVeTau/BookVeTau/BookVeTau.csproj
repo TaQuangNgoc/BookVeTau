@@ -93,8 +93,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Roboto-Medium.ttf" />
-    <EmbeddedResource Include="Roboto-Regular.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
