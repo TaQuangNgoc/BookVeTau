@@ -1,0 +1,12 @@
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\bin\Debug\BookVeTau.exe.config
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\bin\Debug\BookVeTau.exe
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\bin\Debug\BookVeTau.pdb
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\bin\Debug\MaterialSkin.dll
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.csprojResolveAssemblyReference.cache
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.MainForm.resources
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.Properties.Resources.resources
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.csproj.GenerateResource.Cache
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.exe
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.pdb
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.exe.licenses
+c:\users\thaiph\documents\visual studio 2012\Projects\BookVeTau\BookVeTau\obj\Debug\BookVeTau.F200_Book_ve.resources
