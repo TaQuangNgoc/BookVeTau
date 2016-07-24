@@ -211,6 +211,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\checked.jpg" />
+    <EmbeddedResource Include="Resources\Roboto-Medium.ttf" />
+    <EmbeddedResource Include="Resources\Roboto-Regular.ttf" />
     <None Include="Resources\success_32x32.png" />
     <Content Include="Resources\success.png" />
   </ItemGroup>
