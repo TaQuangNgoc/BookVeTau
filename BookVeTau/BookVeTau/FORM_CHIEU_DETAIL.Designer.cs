@@ -26,48 +26,50 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FORM_CHIEU_DETAIL));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialCheckBox1 = new MaterialSkin.Controls.MaterialCheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_4 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_3 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_2 = new DevExpress.XtraEditors.SimpleButton();
             this.A_1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_7 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_6 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_5 = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.simpleButton8 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton10 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton11 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_10 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_9 = new DevExpress.XtraEditors.SimpleButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.simpleButton12 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton13 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton14 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton15 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_14 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_13 = new DevExpress.XtraEditors.SimpleButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.simpleButton16 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton17 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton18 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton19 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_18 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_17 = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.simpleButton20 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton21 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton22 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton23 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_22 = new DevExpress.XtraEditors.SimpleButton();
+            this.A_21 = new DevExpress.XtraEditors.SimpleButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.simpleButton24 = new DevExpress.XtraEditors.SimpleButton();
@@ -138,6 +140,7 @@
             this.simpleButton27 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton52 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton53 = new DevExpress.XtraEditors.SimpleButton();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -179,6 +182,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 7;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.76471F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.70588F));
@@ -277,9 +281,9 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.simpleButton4, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.simpleButton3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.simpleButton2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.A_4, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.A_3, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.A_2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.A_1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
@@ -290,35 +294,35 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(116, 138);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
-            // simpleButton4
+            // A_4
             // 
-            this.simpleButton4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton4.Location = new System.Drawing.Point(61, 72);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton4.TabIndex = 3;
-            this.simpleButton4.Text = "A_4";
+            this.A_4.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_4.Location = new System.Drawing.Point(61, 72);
+            this.A_4.Name = "A_4";
+            this.A_4.Size = new System.Drawing.Size(52, 63);
+            this.A_4.TabIndex = 3;
+            this.A_4.Text = "A_4";
             // 
-            // simpleButton3
+            // A_3
             // 
-            this.simpleButton3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton3.Location = new System.Drawing.Point(3, 72);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton3.TabIndex = 2;
-            this.simpleButton3.Text = "A_3";
+            this.A_3.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_3.Location = new System.Drawing.Point(3, 72);
+            this.A_3.Name = "A_3";
+            this.A_3.Size = new System.Drawing.Size(52, 63);
+            this.A_3.TabIndex = 2;
+            this.A_3.Text = "A_3";
             // 
-            // simpleButton2
+            // A_2
             // 
-            this.simpleButton2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton2.Location = new System.Drawing.Point(61, 3);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton2.TabIndex = 1;
-            this.simpleButton2.Text = "A_2";
+            this.A_2.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_2.Location = new System.Drawing.Point(61, 3);
+            this.A_2.Name = "A_2";
+            this.A_2.Size = new System.Drawing.Size(52, 63);
+            this.A_2.TabIndex = 1;
+            this.A_2.Text = "A_2";
             // 
             // A_1
             // 
@@ -346,9 +350,9 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.simpleButton1, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.simpleButton5, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.simpleButton6, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.simpleButton7, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.A_7, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.A_6, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.A_5, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -368,35 +372,35 @@
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "A_8";
             // 
-            // simpleButton5
+            // A_7
             // 
-            this.simpleButton5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton5.Location = new System.Drawing.Point(3, 72);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton5.TabIndex = 2;
-            this.simpleButton5.Text = "A_7";
+            this.A_7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_7.Location = new System.Drawing.Point(3, 72);
+            this.A_7.Name = "A_7";
+            this.A_7.Size = new System.Drawing.Size(52, 63);
+            this.A_7.TabIndex = 2;
+            this.A_7.Text = "A_7";
             // 
-            // simpleButton6
+            // A_6
             // 
-            this.simpleButton6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton6.Location = new System.Drawing.Point(61, 3);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton6.TabIndex = 1;
-            this.simpleButton6.Text = "A_6";
+            this.A_6.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_6.Location = new System.Drawing.Point(61, 3);
+            this.A_6.Name = "A_6";
+            this.A_6.Size = new System.Drawing.Size(52, 63);
+            this.A_6.TabIndex = 1;
+            this.A_6.Text = "A_6";
             // 
-            // simpleButton7
+            // A_5
             // 
-            this.simpleButton7.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton7.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton7.TabIndex = 0;
-            this.simpleButton7.Text = "A_5";
+            this.A_5.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_5.Location = new System.Drawing.Point(3, 3);
+            this.A_5.Name = "A_5";
+            this.A_5.Size = new System.Drawing.Size(52, 63);
+            this.A_5.TabIndex = 0;
+            this.A_5.Text = "A_5";
             // 
             // panel3
             // 
@@ -415,8 +419,8 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.simpleButton8, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.simpleButton9, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.simpleButton10, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.simpleButton11, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.A_10, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.A_9, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -446,25 +450,25 @@
             this.simpleButton9.TabIndex = 2;
             this.simpleButton9.Text = "A_11";
             // 
-            // simpleButton10
+            // A_10
             // 
-            this.simpleButton10.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton10.Location = new System.Drawing.Point(61, 3);
-            this.simpleButton10.Name = "simpleButton10";
-            this.simpleButton10.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton10.TabIndex = 1;
-            this.simpleButton10.Text = "A_10";
+            this.A_10.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_10.Location = new System.Drawing.Point(61, 3);
+            this.A_10.Name = "A_10";
+            this.A_10.Size = new System.Drawing.Size(52, 63);
+            this.A_10.TabIndex = 1;
+            this.A_10.Text = "A_10";
             // 
-            // simpleButton11
+            // A_9
             // 
-            this.simpleButton11.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton11.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton11.Name = "simpleButton11";
-            this.simpleButton11.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton11.TabIndex = 0;
-            this.simpleButton11.Text = "A_9";
+            this.A_9.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_9.Location = new System.Drawing.Point(3, 3);
+            this.A_9.Name = "A_9";
+            this.A_9.Size = new System.Drawing.Size(52, 63);
+            this.A_9.TabIndex = 0;
+            this.A_9.Text = "A_9";
             // 
             // panel4
             // 
@@ -483,8 +487,8 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Controls.Add(this.simpleButton12, 1, 1);
             this.tableLayoutPanel5.Controls.Add(this.simpleButton13, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.simpleButton14, 1, 0);
-            this.tableLayoutPanel5.Controls.Add(this.simpleButton15, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.A_14, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.A_13, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -514,25 +518,25 @@
             this.simpleButton13.TabIndex = 2;
             this.simpleButton13.Text = "A_15";
             // 
-            // simpleButton14
+            // A_14
             // 
-            this.simpleButton14.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton14.Location = new System.Drawing.Point(61, 3);
-            this.simpleButton14.Name = "simpleButton14";
-            this.simpleButton14.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton14.TabIndex = 1;
-            this.simpleButton14.Text = "A_14";
+            this.A_14.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_14.Location = new System.Drawing.Point(61, 3);
+            this.A_14.Name = "A_14";
+            this.A_14.Size = new System.Drawing.Size(52, 63);
+            this.A_14.TabIndex = 1;
+            this.A_14.Text = "A_14";
             // 
-            // simpleButton15
+            // A_13
             // 
-            this.simpleButton15.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton15.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton15.Name = "simpleButton15";
-            this.simpleButton15.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton15.TabIndex = 0;
-            this.simpleButton15.Text = "A_13";
+            this.A_13.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_13.Location = new System.Drawing.Point(3, 3);
+            this.A_13.Name = "A_13";
+            this.A_13.Size = new System.Drawing.Size(52, 63);
+            this.A_13.TabIndex = 0;
+            this.A_13.Text = "A_13";
             // 
             // panel5
             // 
@@ -551,8 +555,8 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.Controls.Add(this.simpleButton16, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.simpleButton17, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.simpleButton18, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.simpleButton19, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.A_18, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.A_17, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -582,25 +586,25 @@
             this.simpleButton17.TabIndex = 2;
             this.simpleButton17.Text = "A_19";
             // 
-            // simpleButton18
+            // A_18
             // 
-            this.simpleButton18.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton18.Location = new System.Drawing.Point(61, 3);
-            this.simpleButton18.Name = "simpleButton18";
-            this.simpleButton18.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton18.TabIndex = 1;
-            this.simpleButton18.Text = "A_18";
+            this.A_18.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_18.Location = new System.Drawing.Point(61, 3);
+            this.A_18.Name = "A_18";
+            this.A_18.Size = new System.Drawing.Size(52, 63);
+            this.A_18.TabIndex = 1;
+            this.A_18.Text = "A_18";
             // 
-            // simpleButton19
+            // A_17
             // 
-            this.simpleButton19.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton19.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton19.Name = "simpleButton19";
-            this.simpleButton19.Size = new System.Drawing.Size(52, 63);
-            this.simpleButton19.TabIndex = 0;
-            this.simpleButton19.Text = "A_17";
+            this.A_17.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_17.Location = new System.Drawing.Point(3, 3);
+            this.A_17.Name = "A_17";
+            this.A_17.Size = new System.Drawing.Size(52, 63);
+            this.A_17.TabIndex = 0;
+            this.A_17.Text = "A_17";
             // 
             // panel6
             // 
@@ -619,8 +623,8 @@
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel7.Controls.Add(this.simpleButton20, 1, 1);
             this.tableLayoutPanel7.Controls.Add(this.simpleButton21, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.simpleButton22, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.simpleButton23, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.A_22, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.A_21, 0, 0);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -650,25 +654,25 @@
             this.simpleButton21.TabIndex = 2;
             this.simpleButton21.Text = "A_23";
             // 
-            // simpleButton22
+            // A_22
             // 
-            this.simpleButton22.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton22.Location = new System.Drawing.Point(62, 3);
-            this.simpleButton22.Name = "simpleButton22";
-            this.simpleButton22.Size = new System.Drawing.Size(54, 63);
-            this.simpleButton22.TabIndex = 1;
-            this.simpleButton22.Text = "A_22";
+            this.A_22.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_22.Location = new System.Drawing.Point(62, 3);
+            this.A_22.Name = "A_22";
+            this.A_22.Size = new System.Drawing.Size(54, 63);
+            this.A_22.TabIndex = 1;
+            this.A_22.Text = "A_22";
             // 
-            // simpleButton23
+            // A_21
             // 
-            this.simpleButton23.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.simpleButton23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton23.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton23.Name = "simpleButton23";
-            this.simpleButton23.Size = new System.Drawing.Size(53, 63);
-            this.simpleButton23.TabIndex = 0;
-            this.simpleButton23.Text = "A_21";
+            this.A_21.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.A_21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.A_21.Location = new System.Drawing.Point(3, 3);
+            this.A_21.Name = "A_21";
+            this.A_21.Size = new System.Drawing.Size(53, 63);
+            this.A_21.TabIndex = 0;
+            this.A_21.Text = "A_21";
             // 
             // panel7
             // 
@@ -1464,6 +1468,13 @@
             this.simpleButton53.TabIndex = 0;
             this.simpleButton53.Text = "BS_5";
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "checked.jpg");
+            this.imageList1.Images.SetKeyName(1, "tick.jpg");
+            // 
             // FORM_CHIEU_DETAIL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1541,93 +1552,94 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton A_1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton10;
-        private DevExpress.XtraEditors.SimpleButton simpleButton11;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton12;
-        private DevExpress.XtraEditors.SimpleButton simpleButton13;
-        private DevExpress.XtraEditors.SimpleButton simpleButton14;
-        private DevExpress.XtraEditors.SimpleButton simpleButton15;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton16;
-        private DevExpress.XtraEditors.SimpleButton simpleButton17;
-        private DevExpress.XtraEditors.SimpleButton simpleButton18;
-        private DevExpress.XtraEditors.SimpleButton simpleButton19;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private DevExpress.XtraEditors.SimpleButton simpleButton20;
-        private DevExpress.XtraEditors.SimpleButton simpleButton21;
-        private DevExpress.XtraEditors.SimpleButton simpleButton22;
-        private DevExpress.XtraEditors.SimpleButton simpleButton23;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton24;
-        private DevExpress.XtraEditors.SimpleButton simpleButton26;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private DevExpress.XtraEditors.SimpleButton simpleButton28;
-        private DevExpress.XtraEditors.SimpleButton simpleButton29;
-        private DevExpress.XtraEditors.SimpleButton simpleButton30;
-        private DevExpress.XtraEditors.SimpleButton simpleButton31;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private DevExpress.XtraEditors.SimpleButton simpleButton32;
-        private DevExpress.XtraEditors.SimpleButton simpleButton33;
-        private DevExpress.XtraEditors.SimpleButton simpleButton34;
-        private DevExpress.XtraEditors.SimpleButton simpleButton35;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private DevExpress.XtraEditors.SimpleButton simpleButton36;
-        private DevExpress.XtraEditors.SimpleButton simpleButton37;
-        private DevExpress.XtraEditors.SimpleButton simpleButton38;
-        private DevExpress.XtraEditors.SimpleButton simpleButton39;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private DevExpress.XtraEditors.SimpleButton simpleButton40;
-        private DevExpress.XtraEditors.SimpleButton simpleButton41;
-        private DevExpress.XtraEditors.SimpleButton simpleButton42;
-        private DevExpress.XtraEditors.SimpleButton simpleButton43;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private DevExpress.XtraEditors.SimpleButton simpleButton44;
-        private DevExpress.XtraEditors.SimpleButton simpleButton45;
-        private DevExpress.XtraEditors.SimpleButton simpleButton46;
-        private DevExpress.XtraEditors.SimpleButton simpleButton47;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
-        private DevExpress.XtraEditors.SimpleButton simpleButton54;
-        private DevExpress.XtraEditors.SimpleButton simpleButton55;
-        private DevExpress.XtraEditors.SimpleButton simpleButton56;
-        private DevExpress.XtraEditors.SimpleButton simpleButton57;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
-        private DevExpress.XtraEditors.SimpleButton simpleButton58;
-        private DevExpress.XtraEditors.SimpleButton simpleButton59;
-        private DevExpress.XtraEditors.SimpleButton simpleButton60;
-        private DevExpress.XtraEditors.SimpleButton simpleButton61;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
-        private DevExpress.XtraEditors.SimpleButton simpleButton66;
-        private DevExpress.XtraEditors.SimpleButton simpleButton67;
-        private DevExpress.XtraEditors.SimpleButton simpleButton68;
-        private DevExpress.XtraEditors.SimpleButton simpleButton69;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
-        private DevExpress.XtraEditors.SimpleButton simpleButton62;
-        private DevExpress.XtraEditors.SimpleButton simpleButton63;
-        private DevExpress.XtraEditors.SimpleButton simpleButton64;
-        private DevExpress.XtraEditors.SimpleButton simpleButton65;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
-        private DevExpress.XtraEditors.SimpleButton simpleButton48;
-        private DevExpress.XtraEditors.SimpleButton simpleButton49;
-        private DevExpress.XtraEditors.SimpleButton simpleButton50;
-        private DevExpress.XtraEditors.SimpleButton simpleButton51;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
-        private DevExpress.XtraEditors.SimpleButton simpleButton25;
-        private DevExpress.XtraEditors.SimpleButton simpleButton27;
-        private DevExpress.XtraEditors.SimpleButton simpleButton52;
-        private DevExpress.XtraEditors.SimpleButton simpleButton53;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        public DevExpress.XtraEditors.SimpleButton A_4;
+        public DevExpress.XtraEditors.SimpleButton A_3;
+        public DevExpress.XtraEditors.SimpleButton A_2;
+        public DevExpress.XtraEditors.SimpleButton A_1;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        public DevExpress.XtraEditors.SimpleButton simpleButton1;
+        public DevExpress.XtraEditors.SimpleButton A_7;
+        public DevExpress.XtraEditors.SimpleButton A_6;
+        public DevExpress.XtraEditors.SimpleButton A_5;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        public DevExpress.XtraEditors.SimpleButton simpleButton8;
+        public DevExpress.XtraEditors.SimpleButton simpleButton9;
+        public DevExpress.XtraEditors.SimpleButton A_10;
+        public DevExpress.XtraEditors.SimpleButton A_9;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        public DevExpress.XtraEditors.SimpleButton simpleButton12;
+        public DevExpress.XtraEditors.SimpleButton simpleButton13;
+        public DevExpress.XtraEditors.SimpleButton A_14;
+        public DevExpress.XtraEditors.SimpleButton A_13;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        public DevExpress.XtraEditors.SimpleButton simpleButton16;
+        public DevExpress.XtraEditors.SimpleButton simpleButton17;
+        public DevExpress.XtraEditors.SimpleButton A_18;
+        public DevExpress.XtraEditors.SimpleButton A_17;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        public DevExpress.XtraEditors.SimpleButton simpleButton20;
+        public DevExpress.XtraEditors.SimpleButton simpleButton21;
+        public DevExpress.XtraEditors.SimpleButton A_22;
+        public DevExpress.XtraEditors.SimpleButton A_21;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        public DevExpress.XtraEditors.SimpleButton simpleButton24;
+        public DevExpress.XtraEditors.SimpleButton simpleButton26;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        public DevExpress.XtraEditors.SimpleButton simpleButton28;
+        public DevExpress.XtraEditors.SimpleButton simpleButton29;
+        public DevExpress.XtraEditors.SimpleButton simpleButton30;
+        public DevExpress.XtraEditors.SimpleButton simpleButton31;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        public DevExpress.XtraEditors.SimpleButton simpleButton32;
+        public DevExpress.XtraEditors.SimpleButton simpleButton33;
+        public DevExpress.XtraEditors.SimpleButton simpleButton34;
+        public DevExpress.XtraEditors.SimpleButton simpleButton35;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        public DevExpress.XtraEditors.SimpleButton simpleButton36;
+        public DevExpress.XtraEditors.SimpleButton simpleButton37;
+        public DevExpress.XtraEditors.SimpleButton simpleButton38;
+        public DevExpress.XtraEditors.SimpleButton simpleButton39;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        public DevExpress.XtraEditors.SimpleButton simpleButton40;
+        public DevExpress.XtraEditors.SimpleButton simpleButton41;
+        public DevExpress.XtraEditors.SimpleButton simpleButton42;
+        public DevExpress.XtraEditors.SimpleButton simpleButton43;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        public DevExpress.XtraEditors.SimpleButton simpleButton44;
+        public DevExpress.XtraEditors.SimpleButton simpleButton45;
+        public DevExpress.XtraEditors.SimpleButton simpleButton46;
+        public DevExpress.XtraEditors.SimpleButton simpleButton47;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        public DevExpress.XtraEditors.SimpleButton simpleButton54;
+        public DevExpress.XtraEditors.SimpleButton simpleButton55;
+        public DevExpress.XtraEditors.SimpleButton simpleButton56;
+        public DevExpress.XtraEditors.SimpleButton simpleButton57;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        public DevExpress.XtraEditors.SimpleButton simpleButton58;
+        public DevExpress.XtraEditors.SimpleButton simpleButton59;
+        public DevExpress.XtraEditors.SimpleButton simpleButton60;
+        public DevExpress.XtraEditors.SimpleButton simpleButton61;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
+        public DevExpress.XtraEditors.SimpleButton simpleButton66;
+        public DevExpress.XtraEditors.SimpleButton simpleButton67;
+        public DevExpress.XtraEditors.SimpleButton simpleButton68;
+        public DevExpress.XtraEditors.SimpleButton simpleButton69;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        public DevExpress.XtraEditors.SimpleButton simpleButton62;
+        public DevExpress.XtraEditors.SimpleButton simpleButton63;
+        public DevExpress.XtraEditors.SimpleButton simpleButton64;
+        public DevExpress.XtraEditors.SimpleButton simpleButton65;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        public DevExpress.XtraEditors.SimpleButton simpleButton48;
+        public DevExpress.XtraEditors.SimpleButton simpleButton49;
+        public DevExpress.XtraEditors.SimpleButton simpleButton50;
+        public DevExpress.XtraEditors.SimpleButton simpleButton51;
+        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        public DevExpress.XtraEditors.SimpleButton simpleButton25;
+        public DevExpress.XtraEditors.SimpleButton simpleButton27;
+        public DevExpress.XtraEditors.SimpleButton simpleButton52;
+        public DevExpress.XtraEditors.SimpleButton simpleButton53;
+        public System.Windows.Forms.ImageList imageList1;
     }
 }
