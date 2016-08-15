@@ -136,6 +136,10 @@ namespace BookVeTau
            
         }
 
-        
+        internal void DisplayForUpdate(decimal m_id_gd_book_ve)
+        {
+            BookVeEntities book_ve = new BookVeEntities();
+            var gd_book_ve = book_ve.GD_BOOK_VE.Where(x => x.ID == m_id_gd_book_ve).FirstOrDefault();
+        }
     }
 }

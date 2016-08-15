@@ -15,6 +15,8 @@ namespace BookVeTau
     {
         FORM_CHIEU_DETAIL v_form_chieu= new FORM_CHIEU_DETAIL();
         public ImageList m_imageList = new ImageList();
+       
+        decimal m_id_gd_book_ve=0;
         public F200_Book_ve()
         {
             InitializeComponent();
@@ -83,7 +85,7 @@ namespace BookVeTau
                 {
                     luu_thong_tin();
                     XtraMessageBox.Show("Lưu thành công!");
-                    v_form_chieu
+                   
                 }
             }
             catch (Exception v_e)
@@ -205,6 +207,7 @@ namespace BookVeTau
                 else
                 {
                     load_form_chieu_detail();
+                    load_form_chieu_ve_detail();
                    
                 }
                 
@@ -218,15 +221,64 @@ namespace BookVeTau
             
         }
 
+        private void load_form_chieu_ve_detail()
+        {
+            v_form_chieu = new FORM_CHIEU_DETAIL();
+            v_form_chieu.Display((DateTime)m_dtp_ngay_di.EditValue, decimal.Parse(m_cbo_chieu.SelectedValue.ToString()));
+            v_form_chieu.TopLevel = false;
+            m_group_LC_HN.Controls.Add(v_form_chieu);
+            v_form_chieu.WindowState = FormWindowState.Maximized;
+            v_form_chieu.Show();
+        }
+
         private void load_form_chieu_detail()
         {
             v_form_chieu = new FORM_CHIEU_DETAIL();
             v_form_chieu.Display((DateTime)m_dtp_ngay_di.EditValue, decimal.Parse(m_cbo_chieu.SelectedValue.ToString()));
             v_form_chieu.TopLevel = false;
-            m_group_HN_LC.Controls.Add(v_form_chieu);
+            if (int.Parse(m_cbo_chieu.SelectedValue.ToString()) == 3)
+            {
+                m_group_HN_LC.Controls.Add(v_form_chieu);
+            }
+            else
+            {
+                m_group_LC_HN.Controls.Add(v_form_chieu);
+            }
             v_form_chieu.WindowState = FormWindowState.Maximized;
             tableLayoutPanel1.Visible = true;
             v_form_chieu.Show();
+        }
+
+        private void m_sua_thong_tin_Click(object sender, EventArgs e)
+        {
+            SUA_THONG_TIN_DAT_VE v_f = new SUA_THONG_TIN_DAT_VE();
+            v_f.Display(out m_id_gd_book_ve);
+            if( m_id_gd_book_ve!=0)
+            hien_thi_thong_tin_detail(m_id_gd_book_ve);
+        }
+
+        private void hien_thi_thong_tin_detail(decimal m_id_gd_book_ve)
+        {
+            BookVeEntities book_ve = new BookVeEntities();
+            var gd_book_ve = book_ve.GD_BOOK_VE.Where(x => x.ID == m_id_gd_book_ve).FirstOrDefault();
+            m_cbo_chieu.SelectedValue = gd_book_ve.ID_CHIEU;
+           m_txt_ten_cong_ty.Text=  gd_book_ve.TEN_CONG_TY ;
+           m_txt_so_ve.Text=  gd_book_ve.SO_VE.ToString() ;
+           m_txt_gia_ve.Text = gd_book_ve.GIA_VE.ToString();
+           if (gd_book_ve.CAP_CHO_YN == "N")
+               m_cb_cap_cho.Checked = true;
+           else m_cb_cap_cho.Checked = false;
+           if (gd_book_ve.VIP_YN == "Y")
+               m_cb_vip.Checked = true;
+           else m_cb_vip.Checked = false;
+           m_dtp_ngay_di.EditValue= gd_book_ve.NGAY_DI ;
+           m_dtp_ngay_ve.EditValue= gd_book_ve.NGAY_VE ;
+
+           if (gd_book_ve.ID_TAI_KHOAN.ToString()!=null)
+               m_cbo_ten_tai_khoan.SelectedValue = gd_book_ve.ID_TAI_KHOAN;
+            if ( gd_book_ve.MA_PHIEU_THU!=null)
+                m_txt_ma_phieu_thu.Text = gd_book_ve.MA_PHIEU_THU.ToString();
+          
         }
     }
 }
