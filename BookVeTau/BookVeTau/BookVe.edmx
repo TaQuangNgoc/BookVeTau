@@ -46,6 +46,7 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="decimal" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MA_GD_BOOK_VE" Type="nvarchar" MaxLength="500" />
           <Property Name="TEN_CONG_TY" Type="nvarchar" MaxLength="500" />
           <Property Name="SO_VE" Type="decimal" />
           <Property Name="ID_CHIEU" Type="decimal" />
@@ -132,6 +133,7 @@
           <Property Name="NGAY_DAT" Type="DateTime" Precision="3" />
           <Property Name="EMAIL" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="GHI_CHU" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="MA_GD_BOOK_VE" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="GD_BOOK_VE_DETAIL">
           <Key>
@@ -184,6 +186,7 @@
           <EntitySetMapping Name="GD_BOOK_VE">
             <EntityTypeMapping TypeName="BOOK_VE_TAUModel.GD_BOOK_VE">
               <MappingFragment StoreEntitySet="GD_BOOK_VE">
+                <ScalarProperty Name="MA_GD_BOOK_VE" ColumnName="MA_GD_BOOK_VE" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TEN_CONG_TY" ColumnName="TEN_CONG_TY" />
                 <ScalarProperty Name="SO_VE" ColumnName="SO_VE" />

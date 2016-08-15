@@ -28,5 +28,6 @@ namespace BookVeTau
         public Nullable<System.DateTime> NGAY_DAT { get; set; }
         public string EMAIL { get; set; }
         public string GHI_CHU { get; set; }
+        public string MA_GD_BOOK_VE { get; set; }
     }
 }

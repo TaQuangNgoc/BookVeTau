@@ -17,7 +17,19 @@ namespace BookVeTau
         public FORM_CHIEU_DETAIL()
         {
             InitializeComponent();
+            format_button();
            
+        }
+
+        private void format_button()
+        {
+            var IEButton = GetAll(this, typeof(DevExpress.XtraEditors.SimpleButton));
+            foreach (var item in IEButton)
+            {
+                
+                ((DevExpress.XtraEditors.SimpleButton)item).Appearance.BackColor = Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(117)))), ((int)(((byte)(117)))));
+                ((DevExpress.XtraEditors.SimpleButton)item).Appearance.ForeColor = Color.White;
+            }
         }
 
        
@@ -26,6 +38,7 @@ namespace BookVeTau
             var IEButton = GetAll(this, typeof(DevExpress.XtraEditors.SimpleButton));
             foreach (var item in IEButton)
 	            {
+                  
 		            item.Click += Button_Click; 
 	            }                       
         }
@@ -35,12 +48,13 @@ namespace BookVeTau
             if (((DevExpress.XtraEditors.SimpleButton)sender).Text == "X")
             {
                 ((DevExpress.XtraEditors.SimpleButton)sender).Text = ((DevExpress.XtraEditors.SimpleButton)sender).Name;
-                ((DevExpress.XtraEditors.SimpleButton)sender).Appearance.BackColor = Color.Gray;
+                ((DevExpress.XtraEditors.SimpleButton)sender).Appearance.BackColor = Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(189)))), ((int)(((byte)(189)))));
             }
             else
             {
                 ((DevExpress.XtraEditors.SimpleButton)sender).Text = "X";
-                ((DevExpress.XtraEditors.SimpleButton)sender).Appearance.BackColor = Color.Green;
+                ((DevExpress.XtraEditors.SimpleButton)sender).Appearance.BackColor = Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(160)))), ((int)(((byte)(71)))));
+                ((DevExpress.XtraEditors.SimpleButton)sender).Appearance.ForeColor = Color.White;
             } 
            
         }
@@ -87,7 +101,8 @@ namespace BookVeTau
                         {
                             ((DevExpress.XtraEditors.SimpleButton)item).Text = "Y";
 
-                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.BackColor = Color.Red;
+                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.BackColor = Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.ForeColor = Color.White;
                         }
                     }
                 }
@@ -98,7 +113,8 @@ namespace BookVeTau
                         if (item.Text == ("B_" + so_ghe))
                         {
                             ((DevExpress.XtraEditors.SimpleButton)item).Text = "Y";
-                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.BackColor = Color.Red;
+                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.BackColor = Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.ForeColor = Color.White;
                         }
                     }
                 }
@@ -109,7 +125,8 @@ namespace BookVeTau
                         if (item.Text == ("BS_" + so_ghe))
                         {
                             ((DevExpress.XtraEditors.SimpleButton)item).Text = "Y";
-                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.BackColor = Color.Red;
+                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.BackColor = Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+                            ((DevExpress.XtraEditors.SimpleButton)item).Appearance.ForeColor = Color.White;
                         }
                     }
 
@@ -141,5 +158,7 @@ namespace BookVeTau
             BookVeEntities book_ve = new BookVeEntities();
             var gd_book_ve = book_ve.GD_BOOK_VE.Where(x => x.ID == m_id_gd_book_ve).FirstOrDefault();
         }
+
+      
     }
 }

@@ -32,7 +32,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.m_group_HN_LC = new System.Windows.Forms.GroupBox();
-            this.m_group_LC_HN = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.m_btn_luu = new DevExpress.XtraEditors.SimpleButton();
             this.m_group_thong_tin = new System.Windows.Forms.GroupBox();
@@ -48,7 +47,6 @@
             this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
             this.m_txt_ma_phieu_thu = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.m_cbo_ten_tai_khoan = new System.Windows.Forms.ComboBox();
-            this.m_dtp_ngay_ve = new DevExpress.XtraEditors.DateEdit();
             this.m_dtp_ngay_di = new DevExpress.XtraEditors.DateEdit();
             this.m_txt_gia_ve = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.m_txt_ten_cong_ty = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -56,7 +54,6 @@
             this.m_txt_so_ve = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -67,8 +64,6 @@
             this.panel2.SuspendLayout();
             this.m_group_thong_tin.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_ve.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_ve.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_di.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_di.Properties)).BeginInit();
             this.SuspendLayout();
@@ -96,11 +91,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.14058F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.85942F));
             this.tableLayoutPanel1.Controls.Add(this.m_group_HN_LC, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.m_group_LC_HN, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 324);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -118,23 +111,9 @@
             this.m_group_HN_LC.ForeColor = System.Drawing.Color.Black;
             this.m_group_HN_LC.Location = new System.Drawing.Point(3, 3);
             this.m_group_HN_LC.Name = "m_group_HN_LC";
-            this.m_group_HN_LC.Size = new System.Drawing.Size(600, 263);
+            this.m_group_HN_LC.Size = new System.Drawing.Size(1204, 263);
             this.m_group_HN_LC.TabIndex = 0;
             this.m_group_HN_LC.TabStop = false;
-            this.m_group_HN_LC.Text = "Chiều Hà Nội - Lào Cai";
-            // 
-            // m_group_LC_HN
-            // 
-            this.m_group_LC_HN.BackColor = System.Drawing.Color.White;
-            this.m_group_LC_HN.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.m_group_LC_HN.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_group_LC_HN.ForeColor = System.Drawing.Color.Black;
-            this.m_group_LC_HN.Location = new System.Drawing.Point(609, 3);
-            this.m_group_LC_HN.Name = "m_group_LC_HN";
-            this.m_group_LC_HN.Size = new System.Drawing.Size(598, 263);
-            this.m_group_LC_HN.TabIndex = 1;
-            this.m_group_LC_HN.TabStop = false;
-            this.m_group_LC_HN.Text = "Chiều Lào Cai - Hà Nội";
             // 
             // panel2
             // 
@@ -171,7 +150,6 @@
             this.m_group_thong_tin.Controls.Add(this.m_cb_vip);
             this.m_group_thong_tin.Controls.Add(this.m_cb_cap_cho);
             this.m_group_thong_tin.Controls.Add(this.groupBox4);
-            this.m_group_thong_tin.Controls.Add(this.m_dtp_ngay_ve);
             this.m_group_thong_tin.Controls.Add(this.m_dtp_ngay_di);
             this.m_group_thong_tin.Controls.Add(this.m_txt_gia_ve);
             this.m_group_thong_tin.Controls.Add(this.m_txt_ten_cong_ty);
@@ -179,7 +157,6 @@
             this.m_group_thong_tin.Controls.Add(this.m_txt_so_ve);
             this.m_group_thong_tin.Controls.Add(this.materialLabel2);
             this.m_group_thong_tin.Controls.Add(this.materialLabel6);
-            this.m_group_thong_tin.Controls.Add(this.materialLabel7);
             this.m_group_thong_tin.Controls.Add(this.materialLabel3);
             this.m_group_thong_tin.Controls.Add(this.materialLabel5);
             this.m_group_thong_tin.Controls.Add(this.materialLabel4);
@@ -233,7 +210,7 @@
             this.m_cb_vip.AutoSize = true;
             this.m_cb_vip.Depth = 0;
             this.m_cb_vip.Font = new System.Drawing.Font("Roboto", 10F);
-            this.m_cb_vip.Location = new System.Drawing.Point(1130, 25);
+            this.m_cb_vip.Location = new System.Drawing.Point(916, 71);
             this.m_cb_vip.Margin = new System.Windows.Forms.Padding(0);
             this.m_cb_vip.MouseLocation = new System.Drawing.Point(-1, -1);
             this.m_cb_vip.MouseState = MaterialSkin.MouseState.HOVER;
@@ -249,7 +226,7 @@
             this.m_cb_cap_cho.AutoSize = true;
             this.m_cb_cap_cho.Depth = 0;
             this.m_cb_cap_cho.Font = new System.Drawing.Font("Roboto", 10F);
-            this.m_cb_cap_cho.Location = new System.Drawing.Point(1001, 25);
+            this.m_cb_cap_cho.Location = new System.Drawing.Point(787, 71);
             this.m_cb_cap_cho.Margin = new System.Windows.Forms.Padding(0);
             this.m_cb_cap_cho.MouseLocation = new System.Drawing.Point(-1, -1);
             this.m_cb_cap_cho.MouseState = MaterialSkin.MouseState.HOVER;
@@ -383,20 +360,6 @@
             this.m_cbo_ten_tai_khoan.Size = new System.Drawing.Size(315, 26);
             this.m_cbo_ten_tai_khoan.TabIndex = 11;
             // 
-            // m_dtp_ngay_ve
-            // 
-            this.m_dtp_ngay_ve.EditValue = null;
-            this.m_dtp_ngay_ve.Location = new System.Drawing.Point(957, 72);
-            this.m_dtp_ngay_ve.Name = "m_dtp_ngay_ve";
-            this.m_dtp_ngay_ve.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.m_dtp_ngay_ve.Properties.Appearance.Options.UseFont = true;
-            this.m_dtp_ngay_ve.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dtp_ngay_ve.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.m_dtp_ngay_ve.Size = new System.Drawing.Size(223, 24);
-            this.m_dtp_ngay_ve.TabIndex = 8;
-            // 
             // m_dtp_ngay_di
             // 
             this.m_dtp_ngay_di.EditValue = null;
@@ -501,19 +464,6 @@
             this.materialLabel6.TabIndex = 0;
             this.materialLabel6.Text = "Giá vé";
             // 
-            // materialLabel7
-            // 
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel7.Location = new System.Drawing.Point(836, 75);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(62, 19);
-            this.materialLabel7.TabIndex = 0;
-            this.materialLabel7.Text = "Ngày về";
-            // 
             // materialLabel3
             // 
             this.materialLabel3.AutoSize = true;
@@ -583,8 +533,6 @@
             this.m_group_thong_tin.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_ve.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_ve.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_di.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.m_dtp_ngay_di.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -597,7 +545,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox m_group_HN_LC;
-        private System.Windows.Forms.GroupBox m_group_LC_HN;
         private System.Windows.Forms.GroupBox m_group_thong_tin;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
         private MaterialSkin.Controls.MaterialSingleLineTextField m_txt_so_ve;
@@ -611,14 +558,12 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialSingleLineTextField m_txt_ma_phieu_thu;
         private System.Windows.Forms.ComboBox m_cbo_ten_tai_khoan;
-        private DevExpress.XtraEditors.DateEdit m_dtp_ngay_ve;
         private DevExpress.XtraEditors.DateEdit m_dtp_ngay_di;
         private MaterialSkin.Controls.MaterialSingleLineTextField m_txt_gia_ve;
         private MaterialSkin.Controls.MaterialSingleLineTextField m_txt_ten_cong_ty;
         private System.Windows.Forms.ComboBox m_cbo_chieu;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialLabel materialLabel7;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
