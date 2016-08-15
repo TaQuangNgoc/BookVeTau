@@ -87,6 +87,23 @@
           <Property Name="NGAY_VE" Type="datetime" />
           <Property Name="ID_CHIEU" Type="decimal" />
         </EntityType>
+        <Function Name="checkVeVip" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngay" Type="date" Mode="In" />
+          <Parameter Name="chieu" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GET_THONG_KE_VE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="thang" Type="varchar" Mode="In" />
+          <Parameter Name="nam" Type="varchar" Mode="In" />
+          <Parameter Name="chieu" Type="int" Mode="In" />
+        </Function>
+        <Function Name="getSoDoTau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngay" Type="datetime" Mode="In" />
+          <Parameter Name="idToa" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="getSoLuongBooking" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngay" Type="date" Mode="In" />
+          <Parameter Name="chieu" Type="int" Mode="In" />
+        </Function>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -97,6 +114,15 @@
           <EntitySet Name="GD_BOOK_VE" EntityType="BOOK_VE_TAUModel.GD_BOOK_VE" />
           <EntitySet Name="GD_BOOK_VE_DETAIL" EntityType="BOOK_VE_TAUModel.GD_BOOK_VE_DETAIL" />
           <EntitySet Name="V_SO_DO_TAU" EntityType="BOOK_VE_TAUModel.V_SO_DO_TAU" />
+          <FunctionImport Name="GET_THONG_KE_VE" ReturnType="Collection(BOOK_VE_TAUModel.GET_THONG_KE_VE_Result)">
+            <Parameter Name="thang" Mode="In" Type="String" />
+            <Parameter Name="nam" Mode="In" Type="String" />
+            <Parameter Name="chieu" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="getSoDoTau" ReturnType="Collection(BOOK_VE_TAUModel.getSoDoTau_Result)">
+            <Parameter Name="ngay" Mode="In" Type="DateTime" />
+            <Parameter Name="idToa" Mode="In" Type="Decimal" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="CM_DM_TU_DIEN">
           <Key>
@@ -158,6 +184,18 @@
           <Property Type="DateTime" Name="NGAY_VE" Precision="3" />
           <Property Type="Decimal" Name="ID_CHIEU" Precision="18" Scale="0" />
         </EntityType>
+        <ComplexType Name="GET_THONG_KE_VE_Result">
+          <Property Type="String" Name="THU" Nullable="true" MaxLength="2" />
+          <Property Type="String" Name="NGAY" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="BOOKING" Nullable="true" MaxLength="100" />
+          <Property Type="Int32" Name="SL_VE_DA_BAN" Nullable="true" />
+          <Property Type="String" Name="VIP" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="getSoDoTau_Result">
+          <Property Type="Decimal" Name="ghe_so" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="ten_cong_ty" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Column1" Nullable="true" MaxLength="20" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -229,6 +267,26 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GET_THONG_KE_VE" FunctionName="BOOK_VE_TAUModel.Store.GET_THONG_KE_VE">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOK_VE_TAUModel.GET_THONG_KE_VE_Result">
+                <ScalarProperty Name="THU" ColumnName="THU" />
+                <ScalarProperty Name="NGAY" ColumnName="NGAY" />
+                <ScalarProperty Name="BOOKING" ColumnName="BOOKING" />
+                <ScalarProperty Name="SL_VE_DA_BAN" ColumnName="SL_VE_DA_BAN" />
+                <ScalarProperty Name="VIP" ColumnName="VIP" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getSoDoTau" FunctionName="BOOK_VE_TAUModel.Store.getSoDoTau">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOK_VE_TAUModel.getSoDoTau_Result">
+                <ScalarProperty Name="ghe_so" ColumnName="ghe_so" />
+                <ScalarProperty Name="ten_cong_ty" ColumnName="ten_cong_ty" />
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

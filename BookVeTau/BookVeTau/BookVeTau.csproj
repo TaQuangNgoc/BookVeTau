@@ -117,6 +117,12 @@
     <Compile Include="F200_Book_ve.Designer.cs">
       <DependentUpon>F200_Book_ve.cs</DependentUpon>
     </Compile>
+    <Compile Include="F300_ThongKeVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F300_ThongKeVe.Designer.cs">
+      <DependentUpon>F300_ThongKeVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM_CHIEU_DETAIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
       <DependentUpon>BookVe.tt</DependentUpon>
     </Compile>
     <Compile Include="GD_BOOK_VE_DETAIL.cs">
+      <DependentUpon>BookVe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="getSoDoTau_Result.cs">
+      <DependentUpon>BookVe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GET_THONG_KE_VE_Result.cs">
       <DependentUpon>BookVe.tt</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
@@ -151,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F200_Book_ve.resx">
       <DependentUpon>F200_Book_ve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F300_ThongKeVe.resx">
+      <DependentUpon>F300_ThongKeVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM_CHIEU_DETAIL.resx">
       <DependentUpon>FORM_CHIEU_DETAIL.cs</DependentUpon>

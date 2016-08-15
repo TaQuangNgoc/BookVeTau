@@ -18,6 +18,7 @@ namespace BookVeTau
         MaterialSkin.MaterialSkinManager materialSkinManager;
         F100_So_do_tau m_f_so_do_tau;
         F200_Book_ve m_f_book_ve;
+        F300_ThongKeVe m_f_thong_ke_ve;
 
         public MainForm()
         {
@@ -50,6 +51,18 @@ namespace BookVeTau
                     }
                     break;
                 case "m_tab_bao_cao":
+                    if (m_f_thong_ke_ve != null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        m_f_thong_ke_ve = new F300_ThongKeVe();
+                        m_f_thong_ke_ve.TopLevel = false;
+                        m_tab_bao_cao.Controls.Add(m_f_thong_ke_ve);
+                        m_f_thong_ke_ve.WindowState = FormWindowState.Maximized;
+                        m_f_thong_ke_ve.Show();
+                    }
                     break;
                 default:
                     break;

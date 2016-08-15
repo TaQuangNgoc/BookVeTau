@@ -12,6 +12,9 @@ namespace BookVeTau
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Objects;
+    using System.Data.Objects.DataClasses;
+    using System.Linq;
     
     public partial class BookVeEntities : DbContext
     {
@@ -30,5 +33,35 @@ namespace BookVeTau
         public DbSet<GD_BOOK_VE> GD_BOOK_VE { get; set; }
         public DbSet<GD_BOOK_VE_DETAIL> GD_BOOK_VE_DETAIL { get; set; }
         public DbSet<V_SO_DO_TAU> V_SO_DO_TAU { get; set; }
+    
+        public virtual ObjectResult<GET_THONG_KE_VE_Result> GET_THONG_KE_VE(string thang, string nam, Nullable<int> chieu)
+        {
+            var thangParameter = thang != null ?
+                new ObjectParameter("thang", thang) :
+                new ObjectParameter("thang", typeof(string));
+    
+            var namParameter = nam != null ?
+                new ObjectParameter("nam", nam) :
+                new ObjectParameter("nam", typeof(string));
+    
+            var chieuParameter = chieu.HasValue ?
+                new ObjectParameter("chieu", chieu) :
+                new ObjectParameter("chieu", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<GET_THONG_KE_VE_Result>("GET_THONG_KE_VE", thangParameter, namParameter, chieuParameter);
+        }
+    
+        public virtual ObjectResult<getSoDoTau_Result> getSoDoTau(Nullable<System.DateTime> ngay, Nullable<decimal> idToa)
+        {
+            var ngayParameter = ngay.HasValue ?
+                new ObjectParameter("ngay", ngay) :
+                new ObjectParameter("ngay", typeof(System.DateTime));
+    
+            var idToaParameter = idToa.HasValue ?
+                new ObjectParameter("idToa", idToa) :
+                new ObjectParameter("idToa", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getSoDoTau_Result>("getSoDoTau", ngayParameter, idToaParameter);
+        }
     }
 }
