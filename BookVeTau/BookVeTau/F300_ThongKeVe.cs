@@ -44,7 +44,7 @@ namespace BookVeTau
             {
 
             }
-            catch (Exception)
+            catch (Exception v_e)
             {
                 XtraMessageBox.Show(v_e.Message);
             }
