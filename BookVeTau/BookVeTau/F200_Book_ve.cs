@@ -236,8 +236,19 @@ namespace BookVeTau
             if (m_id_gd_book_ve != 0)
             {
                 hien_thi_thong_tin_detail(m_id_gd_book_ve);
-                load_form_chieu_detail();
+                load_form_chieu_detail_for_update(m_id_gd_book_ve);
             }
+        }
+
+        private void load_form_chieu_detail_for_update(decimal m_id_gd_book_ve)
+        {
+            v_form_chieu = new FORM_CHIEU_DETAIL();
+            v_form_chieu.DisplayForUpdate(m_id_gd_book_ve);
+            v_form_chieu.TopLevel = false;
+            m_group_HN_LC.Controls.Add(v_form_chieu);
+            v_form_chieu.WindowState = FormWindowState.Maximized;
+            tableLayoutPanel1.Visible = true;
+            v_form_chieu.Show();
         }
 
         private void hien_thi_thong_tin_detail(decimal m_id_gd_book_ve)
