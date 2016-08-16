@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
+            this.m_tab_cong_no = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.materialTabControl1.SuspendLayout();
@@ -68,6 +69,7 @@
             this.materialTabControl1.Controls.Add(this.m_tab_so_do_tau);
             this.materialTabControl1.Controls.Add(this.m_tab_book_ve);
             this.materialTabControl1.Controls.Add(this.m_tab_bao_cao);
+            this.materialTabControl1.Controls.Add(this.m_tab_cong_no);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.Location = new System.Drawing.Point(0, 0);
@@ -139,6 +141,16 @@
             this.materialTabSelector1.TabIndex = 0;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
+            // m_tab_cong_no
+            // 
+            this.m_tab_cong_no.Location = new System.Drawing.Point(4, 22);
+            this.m_tab_cong_no.Name = "m_tab_cong_no";
+            this.m_tab_cong_no.Padding = new System.Windows.Forms.Padding(3);
+            this.m_tab_cong_no.Size = new System.Drawing.Size(891, 418);
+            this.m_tab_cong_no.TabIndex = 3;
+            this.m_tab_cong_no.Text = "Công nợ";
+            this.m_tab_cong_no.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,5 +180,6 @@
         private MaterialSkin.Controls.MaterialTabSelector materialTabSelector1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabPage m_tab_bao_cao;
+        private System.Windows.Forms.TabPage m_tab_cong_no;
     }
 }

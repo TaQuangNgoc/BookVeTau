@@ -123,6 +123,12 @@
     <Compile Include="F300_ThongKeVe.Designer.cs">
       <DependentUpon>F300_ThongKeVe.cs</DependentUpon>
     </Compile>
+    <Compile Include="F400_Cong_no.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F400_Cong_no.Designer.cs">
+      <DependentUpon>F400_Cong_no.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM_CHIEU_DETAIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,7 +141,13 @@
     <Compile Include="GD_BOOK_VE_DETAIL.cs">
       <DependentUpon>BookVe.tt</DependentUpon>
     </Compile>
+    <Compile Include="getDsCongTy_Result.cs">
+      <DependentUpon>BookVe.tt</DependentUpon>
+    </Compile>
     <Compile Include="getSoDoTau_Result.cs">
+      <DependentUpon>BookVe.tt</DependentUpon>
+    </Compile>
+    <Compile Include="get_cong_no_Result.cs">
       <DependentUpon>BookVe.tt</DependentUpon>
     </Compile>
     <Compile Include="GET_THONG_KE_VE_Result.cs">
@@ -166,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F300_ThongKeVe.resx">
       <DependentUpon>F300_ThongKeVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F400_Cong_no.resx">
+      <DependentUpon>F400_Cong_no.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM_CHIEU_DETAIL.resx">
       <DependentUpon>FORM_CHIEU_DETAIL.cs</DependentUpon>

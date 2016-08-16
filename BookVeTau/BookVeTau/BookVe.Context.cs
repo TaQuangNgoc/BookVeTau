@@ -63,5 +63,31 @@ namespace BookVeTau
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getSoDoTau_Result>("getSoDoTau", ngayParameter, idToaParameter);
         }
+    
+        public virtual ObjectResult<getDsCongTy_Result> getDsCongTy()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<getDsCongTy_Result>("getDsCongTy");
+        }
+    
+        public virtual ObjectResult<get_cong_no_Result> get_cong_no(Nullable<System.DateTime> ngay_bat_dau, Nullable<System.DateTime> ngay_ket_thuc, Nullable<int> num_cong_ty, string ten_cong_ty)
+        {
+            var ngay_bat_dauParameter = ngay_bat_dau.HasValue ?
+                new ObjectParameter("ngay_bat_dau", ngay_bat_dau) :
+                new ObjectParameter("ngay_bat_dau", typeof(System.DateTime));
+    
+            var ngay_ket_thucParameter = ngay_ket_thuc.HasValue ?
+                new ObjectParameter("ngay_ket_thuc", ngay_ket_thuc) :
+                new ObjectParameter("ngay_ket_thuc", typeof(System.DateTime));
+    
+            var num_cong_tyParameter = num_cong_ty.HasValue ?
+                new ObjectParameter("num_cong_ty", num_cong_ty) :
+                new ObjectParameter("num_cong_ty", typeof(int));
+    
+            var ten_cong_tyParameter = ten_cong_ty != null ?
+                new ObjectParameter("ten_cong_ty", ten_cong_ty) :
+                new ObjectParameter("ten_cong_ty", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_cong_no_Result>("get_cong_no", ngay_bat_dauParameter, ngay_ket_thucParameter, num_cong_tyParameter, ten_cong_tyParameter);
+        }
     }
 }

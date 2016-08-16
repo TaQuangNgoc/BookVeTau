@@ -91,11 +91,18 @@
           <Parameter Name="ngay" Type="date" Mode="In" />
           <Parameter Name="chieu" Type="int" Mode="In" />
         </Function>
+        <Function Name="get_cong_no" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngay_bat_dau" Type="datetime" Mode="In" />
+          <Parameter Name="ngay_ket_thuc" Type="datetime" Mode="In" />
+          <Parameter Name="num_cong_ty" Type="int" Mode="In" />
+          <Parameter Name="ten_cong_ty" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="GET_THONG_KE_VE" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="thang" Type="varchar" Mode="In" />
           <Parameter Name="nam" Type="varchar" Mode="In" />
           <Parameter Name="chieu" Type="int" Mode="In" />
         </Function>
+        <Function Name="getDsCongTy" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="getSoDoTau" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ngay" Type="datetime" Mode="In" />
           <Parameter Name="idToa" Type="decimal" Mode="In" />
@@ -122,6 +129,13 @@
           <FunctionImport Name="getSoDoTau" ReturnType="Collection(BOOK_VE_TAUModel.getSoDoTau_Result)">
             <Parameter Name="ngay" Mode="In" Type="DateTime" />
             <Parameter Name="idToa" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="getDsCongTy" ReturnType="Collection(BOOK_VE_TAUModel.getDsCongTy_Result)" />
+          <FunctionImport Name="get_cong_no" ReturnType="Collection(BOOK_VE_TAUModel.get_cong_no_Result)">
+            <Parameter Name="ngay_bat_dau" Mode="In" Type="DateTime" />
+            <Parameter Name="ngay_ket_thuc" Mode="In" Type="DateTime" />
+            <Parameter Name="num_cong_ty" Mode="In" Type="Int32" />
+            <Parameter Name="ten_cong_ty" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="CM_DM_TU_DIEN">
@@ -195,6 +209,19 @@
           <Property Type="Decimal" Name="ghe_so" Nullable="true" Precision="18" Scale="0" />
           <Property Type="String" Name="ten_cong_ty" Nullable="true" MaxLength="500" />
           <Property Type="String" Name="Column1" Nullable="true" MaxLength="20" />
+        </ComplexType>
+
+        <ComplexType Name="getDsCongTy_Result">
+          <Property Type="Int64" Name="Row" Nullable="true" />
+          <Property Type="String" Name="ten_cong_ty" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="get_cong_no_Result">
+          <Property Type="String" Name="ten_cong_ty" Nullable="true" MaxLength="500" />
+          <Property Type="Decimal" Name="so_ve" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="gia_ve" Nullable="true" Precision="18" Scale="3" />
+          <Property Type="Decimal" Name="thanh_tien" Nullable="true" Precision="37" Scale="3" />
+          <Property Type="String" Name="ten_tu_dien" Nullable="true" MaxLength="Max" />
+          <Property Type="DateTime" Name="ngay_dat" Nullable="true" Precision="23" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -284,6 +311,27 @@
                 <ScalarProperty Name="ghe_so" ColumnName="ghe_so" />
                 <ScalarProperty Name="ten_cong_ty" ColumnName="ten_cong_ty" />
                 <ScalarProperty Name="Column1" ColumnName="Column1" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          
+          <FunctionImportMapping FunctionImportName="getDsCongTy" FunctionName="BOOK_VE_TAUModel.Store.getDsCongTy">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOK_VE_TAUModel.getDsCongTy_Result">
+                <ScalarProperty Name="Row" ColumnName="Row" />
+                <ScalarProperty Name="ten_cong_ty" ColumnName="ten_cong_ty" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="get_cong_no" FunctionName="BOOK_VE_TAUModel.Store.get_cong_no">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="BOOK_VE_TAUModel.get_cong_no_Result">
+                <ScalarProperty Name="ten_cong_ty" ColumnName="ten_cong_ty" />
+                <ScalarProperty Name="so_ve" ColumnName="so_ve" />
+                <ScalarProperty Name="gia_ve" ColumnName="gia_ve" />
+                <ScalarProperty Name="thanh_tien" ColumnName="thanh_tien" />
+                <ScalarProperty Name="ten_tu_dien" ColumnName="ten_tu_dien" />
+                <ScalarProperty Name="ngay_dat" ColumnName="ngay_dat" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
