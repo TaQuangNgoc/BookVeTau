@@ -89,5 +89,23 @@ namespace BookVeTau
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<get_cong_no_Result>("get_cong_no", ngay_bat_dauParameter, ngay_ket_thucParameter, num_cong_tyParameter, ten_cong_tyParameter);
         }
+    
+        public virtual int Pr_delete_all_gd_book_ve(Nullable<decimal> iD_GD_BOOK_VE)
+        {
+            var iD_GD_BOOK_VEParameter = iD_GD_BOOK_VE.HasValue ?
+                new ObjectParameter("ID_GD_BOOK_VE", iD_GD_BOOK_VE) :
+                new ObjectParameter("ID_GD_BOOK_VE", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Pr_delete_all_gd_book_ve", iD_GD_BOOK_VEParameter);
+        }
+    
+        public virtual int Pr_delete_records_cua_gd_book_ve(Nullable<decimal> iD_GD_BOOK_VE)
+        {
+            var iD_GD_BOOK_VEParameter = iD_GD_BOOK_VE.HasValue ?
+                new ObjectParameter("ID_GD_BOOK_VE", iD_GD_BOOK_VE) :
+                new ObjectParameter("ID_GD_BOOK_VE", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Pr_delete_records_cua_gd_book_ve", iD_GD_BOOK_VEParameter);
+        }
     }
 }

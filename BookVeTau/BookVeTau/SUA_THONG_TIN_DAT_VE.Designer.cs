@@ -111,6 +111,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dtp_ngay_di.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.m_dtp_ngay_di.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.m_dtp_ngay_di.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.m_dtp_ngay_di.Size = new System.Drawing.Size(234, 24);
             this.m_dtp_ngay_di.TabIndex = 8;
             // 

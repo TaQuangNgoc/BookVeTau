@@ -43,8 +43,8 @@ namespace BookVeTau
                 BookVeEntities book_ve = new BookVeEntities();
                 var id_chieu = int.Parse(m_cbo_chieu.SelectedValue.ToString());
                 DateTime ngay_di = (DateTime)m_dtp_ngay_di.EditValue;
-                var date= new DateTime(ngay_di.Year,ngay_di.Month,ngay_di.Day);
-                 m_cbo_ten_cong_ty.DataSource= book_ve.GD_BOOK_VE.Where(x => x.ID_CHIEU == id_chieu).Where(x => x.NGAY_DI == date).ToList();            
+
+                m_cbo_ten_cong_ty.DataSource = book_ve.GD_BOOK_VE.Where(x => ((DateTime)x.NGAY_DI).Day == ngay_di.Day).Where(x => ((DateTime)x.NGAY_DI).Month == ngay_di.Month).Where(x => ((DateTime)x.NGAY_DI).Year == ngay_di.Year).Where(x => x.ID_CHIEU == id_chieu).ToList();        
                 m_cbo_ten_cong_ty.DisplayMember = "MA_GD_BOOK_VE";
                 m_cbo_ten_cong_ty.ValueMember = "ID";
             }

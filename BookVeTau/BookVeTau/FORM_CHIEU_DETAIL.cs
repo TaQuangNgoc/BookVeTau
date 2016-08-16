@@ -131,10 +131,11 @@ namespace BookVeTau
             }
         }
 
-        internal void Display(DateTime dateTime, decimal id_chieu)
+        internal void Display(DateTime ngay_di, decimal id_chieu)
         {
             BookVeEntities book_ve = new BookVeEntities();
-            var list_gd_book_ve = book_ve.GD_BOOK_VE.Where(x => x.NGAY_DI == dateTime).Where(x=>x.ID_CHIEU== id_chieu).ToList();
+            var date = new DateTime(ngay_di.Year, ngay_di.Month, ngay_di.Day);
+            var list_gd_book_ve = book_ve.GD_BOOK_VE.Where(x =>((DateTime)x.NGAY_DI).Day == ngay_di.Day).Where(x =>((DateTime)x.NGAY_DI).Month == ngay_di.Month).Where(x =>((DateTime)x.NGAY_DI).Year == ngay_di.Year).Where(x => x.ID_CHIEU == id_chieu).ToList();
             if (list_gd_book_ve.Count > 0)
             {
                 for (int i = 0; i < list_gd_book_ve.Count; i++)
@@ -154,8 +155,9 @@ namespace BookVeTau
         {
             BookVeEntities book_ve = new BookVeEntities();
             var gd_book_ve = book_ve.GD_BOOK_VE.Where(x => x.ID == m_id_gd_book_ve).FirstOrDefault();
+            DateTime ngay_di = (DateTime)gd_book_ve.NGAY_DI;
             // format ghế cho những ghế cùng chiều, cùng ngày
-            var list_gd_book_ve = book_ve.GD_BOOK_VE.Where(x => x.NGAY_DI == gd_book_ve.NGAY_DI).Where(x => x.ID_CHIEU == gd_book_ve.ID_CHIEU).ToList();
+            var list_gd_book_ve = book_ve.GD_BOOK_VE.Where(x => ((DateTime)x.NGAY_DI).Day == ngay_di.Day).Where(x => ((DateTime)x.NGAY_DI).Month == ngay_di.Month).Where(x => ((DateTime)x.NGAY_DI).Year == ngay_di.Year).Where(x => x.ID_CHIEU == gd_book_ve.ID_CHIEU).ToList();
             if (list_gd_book_ve.Count > 0)
             {
                 for (int i = 0; i < list_gd_book_ve.Count; i++)

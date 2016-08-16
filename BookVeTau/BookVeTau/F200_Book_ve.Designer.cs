@@ -58,6 +58,8 @@
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.m_btn_tao_lai_trang = new DevExpress.XtraEditors.SimpleButton();
+            this.m_btn_xoa = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -117,6 +119,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.m_btn_xoa);
             this.panel2.Controls.Add(this.m_btn_luu);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 593);
@@ -126,8 +129,8 @@
             // 
             // m_btn_luu
             // 
-            this.m_btn_luu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
-            this.m_btn_luu.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+            this.m_btn_luu.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
+            this.m_btn_luu.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
             this.m_btn_luu.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_btn_luu.Appearance.ForeColor = System.Drawing.Color.White;
             this.m_btn_luu.Appearance.Options.UseBackColor = true;
@@ -145,6 +148,7 @@
             // m_group_thong_tin
             // 
             this.m_group_thong_tin.BackColor = System.Drawing.Color.White;
+            this.m_group_thong_tin.Controls.Add(this.m_btn_tao_lai_trang);
             this.m_group_thong_tin.Controls.Add(this.m_sua_thong_tin);
             this.m_group_thong_tin.Controls.Add(this.m_btn_load);
             this.m_group_thong_tin.Controls.Add(this.m_cb_vip);
@@ -173,8 +177,8 @@
             // 
             // m_sua_thong_tin
             // 
-            this.m_sua_thong_tin.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
-            this.m_sua_thong_tin.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+            this.m_sua_thong_tin.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
+            this.m_sua_thong_tin.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
             this.m_sua_thong_tin.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_sua_thong_tin.Appearance.ForeColor = System.Drawing.Color.White;
             this.m_sua_thong_tin.Appearance.Options.UseBackColor = true;
@@ -210,7 +214,7 @@
             this.m_cb_vip.AutoSize = true;
             this.m_cb_vip.Depth = 0;
             this.m_cb_vip.Font = new System.Drawing.Font("Roboto", 10F);
-            this.m_cb_vip.Location = new System.Drawing.Point(916, 71);
+            this.m_cb_vip.Location = new System.Drawing.Point(897, 71);
             this.m_cb_vip.Margin = new System.Windows.Forms.Padding(0);
             this.m_cb_vip.MouseLocation = new System.Drawing.Point(-1, -1);
             this.m_cb_vip.MouseState = MaterialSkin.MouseState.HOVER;
@@ -220,6 +224,7 @@
             this.m_cb_vip.TabIndex = 5;
             this.m_cb_vip.Text = "Vip";
             this.m_cb_vip.UseVisualStyleBackColor = true;
+            this.m_cb_vip.CheckedChanged += new System.EventHandler(this.m_cb_vip_CheckedChanged);
             // 
             // m_cb_cap_cho
             // 
@@ -371,6 +376,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.m_dtp_ngay_di.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.m_dtp_ngay_di.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.m_dtp_ngay_di.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.m_dtp_ngay_di.Size = new System.Drawing.Size(218, 24);
             this.m_dtp_ngay_di.TabIndex = 7;
             // 
@@ -383,6 +390,7 @@
             this.m_txt_gia_ve.MouseState = MaterialSkin.MouseState.HOVER;
             this.m_txt_gia_ve.Name = "m_txt_gia_ve";
             this.m_txt_gia_ve.PasswordChar = '\0';
+            this.m_txt_gia_ve.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m_txt_gia_ve.SelectedText = "";
             this.m_txt_gia_ve.SelectionLength = 0;
             this.m_txt_gia_ve.SelectionStart = 0;
@@ -415,7 +423,7 @@
             this.m_cbo_chieu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.m_cbo_chieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.m_cbo_chieu.FormattingEnabled = true;
-            this.m_cbo_chieu.Location = new System.Drawing.Point(726, 26);
+            this.m_cbo_chieu.Location = new System.Drawing.Point(897, 22);
             this.m_cbo_chieu.Name = "m_cbo_chieu";
             this.m_cbo_chieu.Size = new System.Drawing.Size(234, 26);
             this.m_cbo_chieu.TabIndex = 3;
@@ -424,15 +432,16 @@
             // 
             this.m_txt_so_ve.Depth = 0;
             this.m_txt_so_ve.Hint = "";
-            this.m_txt_so_ve.Location = new System.Drawing.Point(469, 29);
+            this.m_txt_so_ve.Location = new System.Drawing.Point(510, 25);
             this.m_txt_so_ve.MaxLength = 32767;
             this.m_txt_so_ve.MouseState = MaterialSkin.MouseState.HOVER;
             this.m_txt_so_ve.Name = "m_txt_so_ve";
             this.m_txt_so_ve.PasswordChar = '\0';
+            this.m_txt_so_ve.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.m_txt_so_ve.SelectedText = "";
             this.m_txt_so_ve.SelectionLength = 0;
             this.m_txt_so_ve.SelectionStart = 0;
-            this.m_txt_so_ve.Size = new System.Drawing.Size(123, 23);
+            this.m_txt_so_ve.Size = new System.Drawing.Size(218, 23);
             this.m_txt_so_ve.TabIndex = 2;
             this.m_txt_so_ve.TabStop = false;
             this.m_txt_so_ve.UseSystemPasswordChar = false;
@@ -483,7 +492,7 @@
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel5.Location = new System.Drawing.Point(668, 29);
+            this.materialLabel5.Location = new System.Drawing.Point(792, 29);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(47, 19);
@@ -516,10 +525,48 @@
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Tên công ty\r\n";
             // 
+            // m_btn_tao_lai_trang
+            // 
+            this.m_btn_tao_lai_trang.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(169)))), ((int)(((byte)(71)))));
+            this.m_btn_tao_lai_trang.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(169)))), ((int)(((byte)(71)))));
+            this.m_btn_tao_lai_trang.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_btn_tao_lai_trang.Appearance.ForeColor = System.Drawing.Color.White;
+            this.m_btn_tao_lai_trang.Appearance.Options.UseBackColor = true;
+            this.m_btn_tao_lai_trang.Appearance.Options.UseFont = true;
+            this.m_btn_tao_lai_trang.Appearance.Options.UseForeColor = true;
+            this.m_btn_tao_lai_trang.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.m_btn_tao_lai_trang.Location = new System.Drawing.Point(442, 264);
+            this.m_btn_tao_lai_trang.Name = "m_btn_tao_lai_trang";
+            this.m_btn_tao_lai_trang.Size = new System.Drawing.Size(184, 48);
+            this.m_btn_tao_lai_trang.TabIndex = 15;
+            this.m_btn_tao_lai_trang.Text = "Trở lại";
+            this.m_btn_tao_lai_trang.Visible = false;
+            this.m_btn_tao_lai_trang.Click += new System.EventHandler(this.m_btn_tao_lai_trang_Click);
+            // 
+            // m_btn_xoa
+            // 
+            this.m_btn_xoa.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+            this.m_btn_xoa.Appearance.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+            this.m_btn_xoa.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.m_btn_xoa.Appearance.ForeColor = System.Drawing.Color.White;
+            this.m_btn_xoa.Appearance.Options.UseBackColor = true;
+            this.m_btn_xoa.Appearance.Options.UseFont = true;
+            this.m_btn_xoa.Appearance.Options.UseForeColor = true;
+            this.m_btn_xoa.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.m_btn_xoa.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_btn_xoa.Location = new System.Drawing.Point(842, 0);
+            this.m_btn_xoa.Name = "m_btn_xoa";
+            this.m_btn_xoa.Size = new System.Drawing.Size(184, 48);
+            this.m_btn_xoa.TabIndex = 16;
+            this.m_btn_xoa.Text = "Xóa thông tin đặt vé";
+            this.m_btn_xoa.Visible = false;
+            this.m_btn_xoa.Click += new System.EventHandler(this.m_btn_xoa_Click);
+            // 
             // F200_Book_ve
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1210, 641);
             this.Controls.Add(this.panel1);
             this.Name = "F200_Book_ve";
@@ -571,5 +618,7 @@
         private DevExpress.XtraEditors.SimpleButton m_btn_luu;
         private DevExpress.XtraEditors.SimpleButton m_btn_load;
         private DevExpress.XtraEditors.SimpleButton m_sua_thong_tin;
+        private DevExpress.XtraEditors.SimpleButton m_btn_tao_lai_trang;
+        private DevExpress.XtraEditors.SimpleButton m_btn_xoa;
     }
 }

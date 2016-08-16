@@ -111,6 +111,22 @@
           <Parameter Name="ngay" Type="date" Mode="In" />
           <Parameter Name="chieu" Type="int" Mode="In" />
         </Function>
+        <Function Name="getStringBooking" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngay" Type="date" Mode="In" />
+          <Parameter Name="chieu" Type="int" Mode="In" />
+        </Function>
+        <Function Name="getThuTuNgay" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ngay" Type="date" Mode="In" />
+        </Function>
+        <Function Name="Pr_delete_all_gd_book_ve" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_GD_BOOK_VE" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="Pr_delete_records_cua_gd_book_ve" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ID_GD_BOOK_VE" Type="decimal" Mode="In" />
+        </Function>
+        <Function Name="yn2textCapCho" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="str" Type="varchar" Mode="In" />
+        </Function>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -136,6 +152,12 @@
             <Parameter Name="ngay_ket_thuc" Mode="In" Type="DateTime" />
             <Parameter Name="num_cong_ty" Mode="In" Type="Int32" />
             <Parameter Name="ten_cong_ty" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="Pr_delete_all_gd_book_ve">
+            <Parameter Name="ID_GD_BOOK_VE" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="Pr_delete_records_cua_gd_book_ve">
+            <Parameter Name="ID_GD_BOOK_VE" Mode="In" Type="Decimal" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="CM_DM_TU_DIEN">
@@ -335,6 +357,8 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="Pr_delete_all_gd_book_ve" FunctionName="BOOK_VE_TAUModel.Store.Pr_delete_all_gd_book_ve" />
+          <FunctionImportMapping FunctionImportName="Pr_delete_records_cua_gd_book_ve" FunctionName="BOOK_VE_TAUModel.Store.Pr_delete_records_cua_gd_book_ve" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

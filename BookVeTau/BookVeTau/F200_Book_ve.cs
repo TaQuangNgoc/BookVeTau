@@ -17,9 +17,12 @@ namespace BookVeTau
         public ImageList m_imageList = new ImageList();
        
         decimal m_id_gd_book_ve=0;
+        bool trang_thai_sua = false;
         public F200_Book_ve()
         {
             InitializeComponent();
+            load_data_to_combobox_chieu();
+            load_data_to_combobox_tai_khoan();
            
         }
 
@@ -55,9 +58,10 @@ namespace BookVeTau
         private void F200_Book_ve_Load(object sender, EventArgs e)
         {
            
-            load_data_to_combobox_chieu();
-            load_data_to_combobox_tai_khoan();
+           
             m_rd_chuyen_khoan.Checked = true;
+            m_dtp_ngay_di.EditValue = DateTime.Now;
+            m_cbo_chieu.SelectedValue = 3;
             
         }
 
@@ -85,6 +89,7 @@ namespace BookVeTau
                 {
                     luu_thong_tin();
                     XtraMessageBox.Show("Lưu thành công!");
+                    xoa_trang_trang();
                    
                 }
             }
@@ -98,34 +103,64 @@ namespace BookVeTau
 
         private void luu_thong_tin()
         {
-            BookVeEntities book_ve = new BookVeEntities();
-            GD_BOOK_VE gd_book_ve = new GD_BOOK_VE();
-            gd_book_ve.ID_CHIEU = decimal.Parse(m_cbo_chieu.SelectedValue.ToString());
-            gd_book_ve.MA_GD_BOOK_VE = m_txt_ten_cong_ty.Text + DateTime.Now.Hour + "h " + DateTime.Now.Minute + "p " + DateTime.Now.Second + "s";
-            gd_book_ve.TEN_CONG_TY = m_txt_ten_cong_ty.Text;
-            gd_book_ve.SO_VE = decimal.Parse(m_txt_so_ve.Text);
-            gd_book_ve.GIA_VE = decimal.Parse(m_txt_gia_ve.Text);
-            if (m_cb_cap_cho.Checked == true)
-                gd_book_ve.CAP_CHO_YN = "Y";
-            else gd_book_ve.CAP_CHO_YN = "N";
-            if (m_cb_vip.Checked == true)
-                gd_book_ve.VIP_YN = "Y";
-            else gd_book_ve.VIP_YN = "N";
-            gd_book_ve.NGAY_DI = (DateTime)m_dtp_ngay_di.EditValue;
-            
-            gd_book_ve.NGAY_DAT = DateTime.Now;
-            if (m_rd_chuyen_khoan.Checked == true)
-                gd_book_ve.ID_TAI_KHOAN = decimal.Parse(m_cbo_ten_tai_khoan.SelectedValue.ToString());
-            if (m_rd_tien_mat.Checked == true)
-                gd_book_ve.MA_PHIEU_THU = m_txt_ma_phieu_thu.Text;
-            book_ve.GD_BOOK_VE.Add(gd_book_ve);
-            book_ve.SaveChanges();
-            // luu_thong_tin_detail
-            var last_id = gd_book_ve.ID;
-            var list_control = GetAll(m_group_HN_LC, typeof(DevExpress.XtraEditors.SimpleButton));
-            luu_thong_tin_detail(last_id, list_control);
+            if (m_btn_tao_lai_trang.Visible == false)
+            {
+                BookVeEntities book_ve = new BookVeEntities();
+                GD_BOOK_VE gd_book_ve = new GD_BOOK_VE();
+                luu_thong_tin_gd_book_ve(gd_book_ve);
+                book_ve.GD_BOOK_VE.Add(gd_book_ve);
+                book_ve.SaveChanges();
+                // luu_thong_tin_detail
+                var last_id = gd_book_ve.ID;
+                var list_control = GetAll(m_group_HN_LC, typeof(DevExpress.XtraEditors.SimpleButton));
+                luu_thong_tin_detail(last_id, list_control);
+            }
+            else
+            {
+                BookVeEntities book_ve = new BookVeEntities();
+                GD_BOOK_VE gd_book_ve = book_ve.GD_BOOK_VE.Where(x=>x.ID==m_id_gd_book_ve).FirstOrDefault();
+                luu_thong_tin_gd_book_ve(gd_book_ve);
+                book_ve.SaveChanges();
+                luu_thong_tin_sua_detail(m_id_gd_book_ve);
+            }
 
         }
+
+        private void luu_thong_tin_sua_detail(decimal m_id_gd_book_ve)
+        {
+            var list_control = GetAll(m_group_HN_LC, typeof(DevExpress.XtraEditors.SimpleButton));
+            xoa_ban_ghi_cu(m_id_gd_book_ve);
+            luu_thong_tin_detail(m_id_gd_book_ve, list_control);
+        }
+
+        private void xoa_ban_ghi_cu(decimal m_id_gd_book_ve)
+        {
+            BookVeEntities book_ve = new BookVeEntities();
+            book_ve.Pr_delete_records_cua_gd_book_ve(m_id_gd_book_ve);
+            book_ve.SaveChanges();
+        }
+
+            private void luu_thong_tin_gd_book_ve(GD_BOOK_VE gd_book_ve)
+            {
+                gd_book_ve.ID_CHIEU = decimal.Parse(m_cbo_chieu.SelectedValue.ToString());
+                gd_book_ve.MA_GD_BOOK_VE = m_txt_ten_cong_ty.Text+" " + DateTime.Now.Hour + "h " + DateTime.Now.Minute + "p " + DateTime.Now.Second + "s";
+                gd_book_ve.TEN_CONG_TY = m_txt_ten_cong_ty.Text;
+                gd_book_ve.SO_VE = decimal.Parse(m_txt_so_ve.Text);
+                gd_book_ve.GIA_VE = decimal.Parse(m_txt_gia_ve.Text);
+                if (m_cb_cap_cho.Checked == true)
+                    gd_book_ve.CAP_CHO_YN = "Y";
+                else gd_book_ve.CAP_CHO_YN = "N";
+                if (m_cb_vip.Checked == true)
+                    gd_book_ve.VIP_YN = "Y";
+                else gd_book_ve.VIP_YN = "N";
+                gd_book_ve.NGAY_DI = (DateTime)m_dtp_ngay_di.EditValue;
+
+                gd_book_ve.NGAY_DAT = DateTime.Now;
+                if (m_rd_chuyen_khoan.Checked == true)
+                    gd_book_ve.ID_TAI_KHOAN = decimal.Parse(m_cbo_ten_tai_khoan.SelectedValue.ToString());
+                if (m_rd_tien_mat.Checked == true)
+                    gd_book_ve.MA_PHIEU_THU = m_txt_ma_phieu_thu.Text;
+            }
 
         public IEnumerable<Control> GetAll(Control control, Type type)
         {
@@ -165,6 +200,24 @@ namespace BookVeTau
 
         private bool check_thong_tin_is_ok()
         {
+            if (m_txt_ten_cong_ty.Text == "" || m_txt_so_ve.Text == "" || m_txt_gia_ve.Text == ""|| m_cbo_chieu.Text=="")
+            {
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin");
+                return false;
+            }
+            //if (check_so_luong_ve_bang_0())
+            //    return false;
+            return true;
+        }
+
+        private bool check_so_luong_ve_bang_0()
+        {
+            var list_control_button = GetAll(m_group_HN_LC, typeof(DevExpress.XtraEditors.SimpleButton));
+            foreach (var item in list_control_button)
+            {
+                if (((DevExpress.XtraEditors.SimpleButton)item).Text == "X")
+                    return false;
+            }
             return true;
         }
 
@@ -235,6 +288,9 @@ namespace BookVeTau
             v_f.Display(out m_id_gd_book_ve);
             if (m_id_gd_book_ve != 0)
             {
+                m_btn_load.Visible = false;
+                m_btn_tao_lai_trang.Visible = true;
+                m_btn_xoa.Visible = true;
                 hien_thi_thong_tin_detail(m_id_gd_book_ve);
                 load_form_chieu_detail_for_update(m_id_gd_book_ve);
             }
@@ -258,7 +314,7 @@ namespace BookVeTau
             m_cbo_chieu.SelectedValue = gd_book_ve.ID_CHIEU;
            m_txt_ten_cong_ty.Text=  gd_book_ve.TEN_CONG_TY ;
            m_txt_so_ve.Text=  gd_book_ve.SO_VE.ToString() ;
-           m_txt_gia_ve.Text = gd_book_ve.GIA_VE.ToString();
+           m_txt_gia_ve.Text = ((decimal)gd_book_ve.GIA_VE).ToString("n0");
            if (gd_book_ve.CAP_CHO_YN == "N")
                m_cb_cap_cho.Checked = true;
            else m_cb_cap_cho.Checked = false;
@@ -271,6 +327,57 @@ namespace BookVeTau
             if ( gd_book_ve.MA_PHIEU_THU!=null)
                 m_txt_ma_phieu_thu.Text = gd_book_ve.MA_PHIEU_THU.ToString();
           
+        }
+
+        private void m_btn_tao_lai_trang_Click(object sender, EventArgs e)
+        {
+            xoa_trang_trang();
+           
+        }
+
+        private void xoa_trang_trang()
+        {
+            m_txt_gia_ve.Text = "";
+            m_txt_ma_phieu_thu.Text = "";
+            m_txt_so_ve.Text = "";
+            m_txt_ten_cong_ty.Text = "";
+            m_cb_cap_cho.Checked = false;
+            m_cb_vip.Checked = false;
+            m_rd_chuyen_khoan.Checked = true;
+            m_dtp_ngay_di.EditValue = DateTime.Now;
+            m_cbo_chieu.SelectedValue = 3;
+            m_group_HN_LC.Controls.Clear();
+            m_btn_load.Visible = true;
+            m_btn_tao_lai_trang.Visible = false;
+            m_btn_xoa.Visible = false;
+        }
+
+        private void m_btn_xoa_Click(object sender, EventArgs e)
+        {
+
+            BookVeEntities book_ve = new BookVeEntities();
+            book_ve.Pr_delete_all_gd_book_ve(m_id_gd_book_ve);
+            book_ve.SaveChanges();
+            MessageBox.Show("Đã xóa thông tin thành công!");
+            xoa_trang_trang();
+        }
+
+        private void m_cb_vip_CheckedChanged(object sender, EventArgs e)
+        {
+            change_check_m_cb_vip();
+        }
+
+        private void change_check_m_cb_vip()
+        {
+            if (m_cb_vip.Checked == true)
+            {
+                m_txt_so_ve.Text = "2";
+                m_txt_so_ve.Enabled = false;
+            }
+            else
+            {
+                m_txt_so_ve.Enabled = true;
+            }
         }
     }
 }
