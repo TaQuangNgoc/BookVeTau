@@ -153,9 +153,9 @@ namespace BookVeTau
                 if (m_cb_vip.Checked == true)
                     gd_book_ve.VIP_YN = "Y";
                 else gd_book_ve.VIP_YN = "N";
-                gd_book_ve.NGAY_DI = (DateTime)m_dtp_ngay_di.EditValue;
+                gd_book_ve.NGAY_DI = ((DateTime)m_dtp_ngay_di.EditValue).Date;
 
-                gd_book_ve.NGAY_DAT = DateTime.Now;
+                gd_book_ve.NGAY_DAT = DateTime.Now.Date;
                 if (m_rd_chuyen_khoan.Checked == true)
                     gd_book_ve.ID_TAI_KHOAN = decimal.Parse(m_cbo_ten_tai_khoan.SelectedValue.ToString());
                 if (m_rd_tien_mat.Checked == true)
@@ -322,10 +322,21 @@ namespace BookVeTau
                m_cb_vip.Checked = true;
            else m_cb_vip.Checked = false;
            m_dtp_ngay_di.EditValue= gd_book_ve.NGAY_DI ;
-           if (gd_book_ve.ID_TAI_KHOAN!=null)
+           if (gd_book_ve.ID_TAI_KHOAN != null)
+           {
                m_cbo_ten_tai_khoan.SelectedValue = gd_book_ve.ID_TAI_KHOAN;
-            if ( gd_book_ve.MA_PHIEU_THU!=null)
-                m_txt_ma_phieu_thu.Text = gd_book_ve.MA_PHIEU_THU.ToString();
+               m_rd_chuyen_khoan.Checked = true;
+           }
+           else if (gd_book_ve.MA_PHIEU_THU != null)
+           {
+               m_txt_ma_phieu_thu.Text = gd_book_ve.MA_PHIEU_THU.ToString();
+               m_rd_tien_mat.Checked = true;
+           }
+           else
+           {
+               m_rd_cong_no.Checked = true;
+           }
+            
           
         }
 
