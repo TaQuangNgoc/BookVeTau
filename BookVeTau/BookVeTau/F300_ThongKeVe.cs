@@ -42,7 +42,12 @@ namespace BookVeTau
         {
             try
             {
-
+                BookVeEntities v_ett = new BookVeEntities();
+                var v_path_hn_lc = v_ett.CM_DM_TU_DIEN.Where(x => x.ID == 10).First().TEN_TU_DIEN;
+                var v_path_lc_hn = v_ett.CM_DM_TU_DIEN.Where(x => x.ID == 11).First().TEN_TU_DIEN;
+                gridView1.ExportToXls(v_path_hn_lc + "\\HN-LC thang " + m_txt_thang.Text + " nam " + m_txt_nam.Text + ".xls");
+                gridView2.ExportToXls(v_path_lc_hn + "\\LC-HN thang " + m_txt_thang.Text + " nam " + m_txt_nam.Text + ".xls");
+                DevExpress.XtraEditors.XtraMessageBox.Show("Trích xuất dữ liệu thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception v_e)
             {

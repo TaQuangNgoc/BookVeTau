@@ -45,5 +45,25 @@ namespace BookVeTau
 
             gridView1.ExpandAllGroups();
         }
+
+        private void m_cmd_report_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Filter = "xls files (*.xls)|*.xls|All files (*.*)|*.*";
+                saveFileDialog1.RestoreDirectory = true;
+                saveFileDialog1.FileName = "Bảng kê công nợ";
+                if(saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    gridView1.ExportToXls(saveFileDialog1.FileName);
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Trích xuất dữ liệu thành công!", "THÔNG BÁO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception v_e)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show(v_e.Message);
+            }
+        }
     }
 }
