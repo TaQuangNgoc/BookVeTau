@@ -82,14 +82,39 @@ namespace BookVeTau
 
         private void load_data_2_activeSheet(int ip_int_chieu, int ip_int_toa, DateTime ip_dat_ngay_di, Worksheet activeSheet)
         {
-            BookVeEntities v_ett = new BookVeEntities();
-            var v_lst = v_ett.V_SO_DO_TAU.Where(x => x.ID_CHIEU == ip_int_chieu && x.ID_TOA == ip_int_toa && x.NGAY_DI == ip_dat_ngay_di).ToList();
-            int row = 5;
-            foreach (var item in v_lst)
+            int v_sl_ghe = 0;
+            if (ip_int_toa == 1 || ip_int_toa == 9)
             {
-                activeSheet.Cells[row, 0].Value = item.GHE_SO.Value.ToString();
-                activeSheet.Cells[row, 1].Value = item.TEN_CONG_TY;
-                activeSheet.Cells[row, 2].Value = item.CAP_CHO;
+                v_sl_ghe = 24;
+            }
+            else
+            {
+                v_sl_ghe = 22;
+            }
+            BookVeEntities v_ett = new BookVeEntities();
+            var v_lst = v_ett.V_SO_DO_TAU.Where(x => 
+                x.ID_CHIEU == ip_int_chieu 
+                && x.ID_TOA == ip_int_toa 
+                && x.NGAY_DI.Value.Day == ip_dat_ngay_di.Day
+                && x.NGAY_DI.Value.Month == ip_dat_ngay_di.Month
+                && x.NGAY_DI.Value.Year == ip_dat_ngay_di.Year)
+                .OrderBy(x=>x.GHE_SO).ToList();
+            int row = 5;
+
+            for (int i = 1; i <= v_sl_ghe; i++)
+            {
+                var item = v_lst.Where(x => x.GHE_SO == i).FirstOrDefault();
+                activeSheet.Cells[row, 0].Value = i;
+                if (item != null)
+                {
+                    activeSheet.Cells[row, 1].Value = item.TEN_CONG_TY;
+                    activeSheet.Cells[row, 2].Value = item.CAP_CHO;
+                }
+                else
+                {
+                    activeSheet.Cells[row, 1].Value = "";
+                    activeSheet.Cells[row, 2].Value = "";
+                }
                 row++;
             }
         }

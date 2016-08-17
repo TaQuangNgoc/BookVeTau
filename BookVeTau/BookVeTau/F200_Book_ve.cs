@@ -266,8 +266,7 @@ namespace BookVeTau
             }
             catch (Exception v_e)
             {
-                throw v_e;
-
+                XtraMessageBox.Show(v_e.Message);
             }            
         }
 
