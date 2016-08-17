@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::BookVeTau.SplashScreen1), true, true);
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
@@ -35,14 +37,16 @@
             this.m_tab_book_ve = new System.Windows.Forms.TabPage();
             this.m_tab_bao_cao = new System.Windows.Forms.TabPage();
             this.m_tab_cong_no = new System.Windows.Forms.TabPage();
+            this.m_tab_cau_hinh = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.m_tab_cau_hinh = new System.Windows.Forms.TabPage();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.materialTabControl1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -122,6 +126,16 @@
             this.m_tab_cong_no.Text = "Công nợ";
             this.m_tab_cong_no.UseVisualStyleBackColor = true;
             // 
+            // m_tab_cau_hinh
+            // 
+            this.m_tab_cau_hinh.Location = new System.Drawing.Point(4, 22);
+            this.m_tab_cau_hinh.Name = "m_tab_cau_hinh";
+            this.m_tab_cau_hinh.Padding = new System.Windows.Forms.Padding(3);
+            this.m_tab_cau_hinh.Size = new System.Drawing.Size(891, 418);
+            this.m_tab_cau_hinh.TabIndex = 4;
+            this.m_tab_cau_hinh.Text = "Cấu hình";
+            this.m_tab_cau_hinh.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
@@ -135,7 +149,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Controls.Add(this.simpleButton1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(899, 38);
@@ -153,15 +168,18 @@
             this.materialTabSelector1.TabIndex = 0;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // m_tab_cau_hinh
+            // simpleButton1
             // 
-            this.m_tab_cau_hinh.Location = new System.Drawing.Point(4, 22);
-            this.m_tab_cau_hinh.Name = "m_tab_cau_hinh";
-            this.m_tab_cau_hinh.Padding = new System.Windows.Forms.Padding(3);
-            this.m_tab_cau_hinh.Size = new System.Drawing.Size(891, 418);
-            this.m_tab_cau_hinh.TabIndex = 4;
-            this.m_tab_cau_hinh.Text = "Cấu hình";
-            this.m_tab_cau_hinh.UseVisualStyleBackColor = true;
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(57)))), ((int)(((byte)(53)))));
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(861, 0);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(38, 38);
+            this.simpleButton1.TabIndex = 0;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // MainForm
             // 
@@ -177,6 +195,7 @@
             this.panel4.ResumeLayout(false);
             this.materialTabControl1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -194,5 +213,6 @@
         private System.Windows.Forms.TabPage m_tab_bao_cao;
         private System.Windows.Forms.TabPage m_tab_cong_no;
         private System.Windows.Forms.TabPage m_tab_cau_hinh;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
