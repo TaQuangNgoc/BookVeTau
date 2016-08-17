@@ -34,10 +34,11 @@
             this.m_tab_so_do_tau = new System.Windows.Forms.TabPage();
             this.m_tab_book_ve = new System.Windows.Forms.TabPage();
             this.m_tab_bao_cao = new System.Windows.Forms.TabPage();
+            this.m_tab_cong_no = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.m_tab_cong_no = new System.Windows.Forms.TabPage();
+            this.m_tab_cau_hinh = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.materialTabControl1.SuspendLayout();
@@ -70,6 +71,7 @@
             this.materialTabControl1.Controls.Add(this.m_tab_book_ve);
             this.materialTabControl1.Controls.Add(this.m_tab_bao_cao);
             this.materialTabControl1.Controls.Add(this.m_tab_cong_no);
+            this.materialTabControl1.Controls.Add(this.m_tab_cau_hinh);
             this.materialTabControl1.Depth = 0;
             this.materialTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialTabControl1.Location = new System.Drawing.Point(0, 0);
@@ -110,6 +112,16 @@
             this.m_tab_bao_cao.TabIndex = 2;
             this.m_tab_bao_cao.Text = "Báo cáo";
             // 
+            // m_tab_cong_no
+            // 
+            this.m_tab_cong_no.Location = new System.Drawing.Point(4, 22);
+            this.m_tab_cong_no.Name = "m_tab_cong_no";
+            this.m_tab_cong_no.Padding = new System.Windows.Forms.Padding(3);
+            this.m_tab_cong_no.Size = new System.Drawing.Size(891, 418);
+            this.m_tab_cong_no.TabIndex = 3;
+            this.m_tab_cong_no.Text = "Công nợ";
+            this.m_tab_cong_no.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
@@ -141,15 +153,15 @@
             this.materialTabSelector1.TabIndex = 0;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // m_tab_cong_no
+            // m_tab_cau_hinh
             // 
-            this.m_tab_cong_no.Location = new System.Drawing.Point(4, 22);
-            this.m_tab_cong_no.Name = "m_tab_cong_no";
-            this.m_tab_cong_no.Padding = new System.Windows.Forms.Padding(3);
-            this.m_tab_cong_no.Size = new System.Drawing.Size(891, 418);
-            this.m_tab_cong_no.TabIndex = 3;
-            this.m_tab_cong_no.Text = "Công nợ";
-            this.m_tab_cong_no.UseVisualStyleBackColor = true;
+            this.m_tab_cau_hinh.Location = new System.Drawing.Point(4, 22);
+            this.m_tab_cau_hinh.Name = "m_tab_cau_hinh";
+            this.m_tab_cau_hinh.Padding = new System.Windows.Forms.Padding(3);
+            this.m_tab_cau_hinh.Size = new System.Drawing.Size(891, 418);
+            this.m_tab_cau_hinh.TabIndex = 4;
+            this.m_tab_cau_hinh.Text = "Cấu hình";
+            this.m_tab_cau_hinh.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -181,5 +193,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabPage m_tab_bao_cao;
         private System.Windows.Forms.TabPage m_tab_cong_no;
+        private System.Windows.Forms.TabPage m_tab_cau_hinh;
     }
 }

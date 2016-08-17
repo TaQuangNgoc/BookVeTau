@@ -20,6 +20,7 @@ namespace BookVeTau
         F200_Book_ve m_f_book_ve;
         F300_ThongKeVe m_f_thong_ke_ve;
         F400_Cong_no m_f_cong_no;
+        F500_Cau_hinh m_f_cau_hinh;
 
         public MainForm()
         {
@@ -77,6 +78,20 @@ namespace BookVeTau
                         m_tab_cong_no.Controls.Add(m_f_cong_no);
                         m_f_cong_no.WindowState = FormWindowState.Maximized;
                         m_f_cong_no.Show();
+                    }
+                    break;
+                case "m_tab_cau_hinh":
+                    if (m_f_cau_hinh != null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        m_f_cau_hinh = new F500_Cau_hinh();
+                        m_f_cau_hinh.TopLevel = false;
+                        m_tab_cau_hinh.Controls.Add(m_f_cau_hinh);
+                        m_f_cau_hinh.WindowState = FormWindowState.Maximized;
+                        m_f_cau_hinh.Show();
                     }
                     break;
                 default:

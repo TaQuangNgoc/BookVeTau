@@ -129,6 +129,12 @@
     <Compile Include="F400_Cong_no.Designer.cs">
       <DependentUpon>F400_Cong_no.cs</DependentUpon>
     </Compile>
+    <Compile Include="F500_Cau_hinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F500_Cau_hinh.Designer.cs">
+      <DependentUpon>F500_Cau_hinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM_CHIEU_DETAIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="F400_Cong_no.resx">
       <DependentUpon>F400_Cong_no.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F500_Cau_hinh.resx">
+      <DependentUpon>F500_Cau_hinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM_CHIEU_DETAIL.resx">
       <DependentUpon>FORM_CHIEU_DETAIL.cs</DependentUpon>
