@@ -313,6 +313,7 @@ namespace BookVeTau
             m_cbo_chieu.SelectedValue = gd_book_ve.ID_CHIEU;
            m_txt_ten_cong_ty.Text=  gd_book_ve.TEN_CONG_TY ;
            m_txt_so_ve.Text=  gd_book_ve.SO_VE.ToString() ;
+            if(gd_book_ve.GIA_VE!=null)
            m_txt_gia_ve.Text = ((decimal)gd_book_ve.GIA_VE).ToString("n0");
            if (gd_book_ve.CAP_CHO_YN == "N")
                m_cb_cap_cho.Checked = true;
