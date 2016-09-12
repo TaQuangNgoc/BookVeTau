@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BOOK_VE_TAUModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="BOOK_VE_TAUModelStoreContainer">
+          <EntitySet Name="DM_CONG_TY" EntityType="BOOK_VE_TAUModel.Store.DM_CONG_TY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GD_BOOKING_FROM_WEB" EntityType="BOOK_VE_TAUModel.Store.GD_BOOKING_FROM_WEB" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="DM_CONG_TY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_CONG_TY" Type="nvarchar" MaxLength="500" />
+          <Property Name="DIA_CHI" Type="nvarchar" MaxLength="500" />
+          <Property Name="SDT" Type="varchar" MaxLength="50" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="GD_BOOKING_FROM_WEB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_CONG_TY" Type="nvarchar" MaxLength="500" />
+          <Property Name="SO_VE" Type="int" />
+          <Property Name="ID_CHIEU" Type="int" />
+          <Property Name="NGAY_DI" Type="datetime" />
+          <Property Name="NGAY_DAT" Type="datetime" />
+          <Property Name="SO_VE_VIP" Type="int" />
+          <Property Name="GHI_CHU" Type="nvarchar" MaxLength="500" />
+          <Property Name="TRANG_THAI" Type="bit" />
+          <Property Name="GHI_CHU_TIEP_NHAN" Type="nvarchar" MaxLength="500" />
+          <Property Name="SDT" Type="nchar" MaxLength="12" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BOOK_VE_TAUModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BOOK_VE_TAUEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="DM_CONG_TY" EntityType="BOOK_VE_TAUModel.DM_CONG_TY" />
+          <EntitySet Name="GD_BOOKING_FROM_WEB" EntityType="BOOK_VE_TAUModel.GD_BOOKING_FROM_WEB" />
+        </EntityContainer>
+        <EntityType Name="DM_CONG_TY">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_CONG_TY" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="DIA_CHI" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="SDT" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="GD_BOOKING_FROM_WEB">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TEN_CONG_TY" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="SO_VE" Type="Int32" />
+          <Property Name="ID_CHIEU" Type="Int32" />
+          <Property Name="NGAY_DI" Type="DateTime" Precision="3" />
+          <Property Name="NGAY_DAT" Type="DateTime" Precision="3" />
+          <Property Name="SO_VE_VIP" Type="Int32" />
+          <Property Name="GHI_CHU" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="TRANG_THAI" Type="Boolean" />
+          <Property Name="GHI_CHU_TIEP_NHAN" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="SDT" MaxLength="12" FixedLength="true" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BOOK_VE_TAUModelStoreContainer" CdmEntityContainer="BOOK_VE_TAUEntities">
+          <EntitySetMapping Name="DM_CONG_TY">
+            <EntityTypeMapping TypeName="BOOK_VE_TAUModel.DM_CONG_TY">
+              <MappingFragment StoreEntitySet="DM_CONG_TY">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TEN_CONG_TY" ColumnName="TEN_CONG_TY" />
+                <ScalarProperty Name="DIA_CHI" ColumnName="DIA_CHI" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GD_BOOKING_FROM_WEB">
+            <EntityTypeMapping TypeName="BOOK_VE_TAUModel.GD_BOOKING_FROM_WEB">
+              <MappingFragment StoreEntitySet="GD_BOOKING_FROM_WEB">
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TEN_CONG_TY" ColumnName="TEN_CONG_TY" />
+                <ScalarProperty Name="SO_VE" ColumnName="SO_VE" />
+                <ScalarProperty Name="ID_CHIEU" ColumnName="ID_CHIEU" />
+                <ScalarProperty Name="NGAY_DI" ColumnName="NGAY_DI" />
+                <ScalarProperty Name="NGAY_DAT" ColumnName="NGAY_DAT" />
+                <ScalarProperty Name="SO_VE_VIP" ColumnName="SO_VE_VIP" />
+                <ScalarProperty Name="GHI_CHU" ColumnName="GHI_CHU" />
+                <ScalarProperty Name="TRANG_THAI" ColumnName="TRANG_THAI" />
+                <ScalarProperty Name="GHI_CHU_TIEP_NHAN" ColumnName="GHI_CHU_TIEP_NHAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

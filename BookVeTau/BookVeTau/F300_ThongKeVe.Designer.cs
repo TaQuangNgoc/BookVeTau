@@ -28,9 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue1 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule2 = new DevExpress.XtraGrid.GridFormatRule();
+            DevExpress.XtraEditors.FormatConditionRuleValue formatConditionRuleValue2 = new DevExpress.XtraEditors.FormatConditionRuleValue();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.m_cmd_export = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.m_grc_hn_lc = new DevExpress.XtraGrid.GridControl();
@@ -39,7 +42,6 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -49,6 +51,8 @@
             this.m_txt_thang = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.m_cmd_export = new MaterialSkin.Controls.MaterialRaisedButton();
             this.m_grc_lc_hn = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,51 +61,38 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc_hn_lc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_grc_lc_hn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
+            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gridColumn5.Caption = "VIP";
+            this.gridColumn5.FieldName = "VIP";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 4;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(789, 513);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.m_cmd_export);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 453);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(789, 60);
-            this.panel3.TabIndex = 2;
-            // 
-            // m_cmd_export
-            // 
-            this.m_cmd_export.Depth = 0;
-            this.m_cmd_export.Dock = System.Windows.Forms.DockStyle.Right;
-            this.m_cmd_export.Location = new System.Drawing.Point(622, 0);
-            this.m_cmd_export.MouseState = MaterialSkin.MouseState.HOVER;
-            this.m_cmd_export.Name = "m_cmd_export";
-            this.m_cmd_export.Primary = true;
-            this.m_cmd_export.Size = new System.Drawing.Size(167, 60);
-            this.m_cmd_export.TabIndex = 4;
-            this.m_cmd_export.Text = "Xuất báo cáo";
-            this.m_cmd_export.UseVisualStyleBackColor = true;
-            this.m_cmd_export.Click += new System.EventHandler(this.m_cmd_export_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -115,7 +106,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(789, 446);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(789, 386);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel4
@@ -125,7 +116,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(388, 440);
+            this.panel4.Size = new System.Drawing.Size(388, 380);
             this.panel4.TabIndex = 0;
             // 
             // m_grc_hn_lc
@@ -135,7 +126,7 @@
             this.m_grc_hn_lc.Location = new System.Drawing.Point(0, 50);
             this.m_grc_hn_lc.MainView = this.gridView1;
             this.m_grc_hn_lc.Name = "m_grc_hn_lc";
-            this.m_grc_hn_lc.Size = new System.Drawing.Size(388, 390);
+            this.m_grc_hn_lc.Size = new System.Drawing.Size(388, 330);
             this.m_grc_hn_lc.TabIndex = 1;
             this.m_grc_hn_lc.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -155,9 +146,21 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5});
+            gridFormatRule1.Column = this.gridColumn5;
+            gridFormatRule1.ColumnApplyTo = this.gridColumn5;
+            gridFormatRule1.Name = "Format0";
+            formatConditionRuleValue1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            formatConditionRuleValue1.Appearance.ForeColor = System.Drawing.Color.Red;
+            formatConditionRuleValue1.Appearance.Options.UseFont = true;
+            formatConditionRuleValue1.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue1.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue1.Value1 = "HẾT";
+            gridFormatRule1.Rule = formatConditionRuleValue1;
+            this.gridView1.FormatRules.Add(gridFormatRule1);
             this.gridView1.GridControl = this.m_grc_hn_lc;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsMenu.ShowConditionalFormattingItem = true;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.PaintStyleName = "Web";
             // 
@@ -199,16 +202,6 @@
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
             // 
-            // gridColumn5
-            // 
-            this.gridColumn5.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn5.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn5.Caption = "VIP";
-            this.gridColumn5.FieldName = "VIP";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
-            // 
             // materialLabel3
             // 
             this.materialLabel3.Depth = 0;
@@ -230,7 +223,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(397, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(389, 440);
+            this.panel5.Size = new System.Drawing.Size(389, 380);
             this.panel5.TabIndex = 1;
             // 
             // materialLabel4
@@ -335,6 +328,29 @@
             this.materialLabel1.TabIndex = 0;
             this.materialLabel1.Text = "Tháng";
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.m_cmd_export);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 453);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(789, 60);
+            this.panel3.TabIndex = 2;
+            // 
+            // m_cmd_export
+            // 
+            this.m_cmd_export.Depth = 0;
+            this.m_cmd_export.Dock = System.Windows.Forms.DockStyle.Right;
+            this.m_cmd_export.Location = new System.Drawing.Point(622, 0);
+            this.m_cmd_export.MouseState = MaterialSkin.MouseState.HOVER;
+            this.m_cmd_export.Name = "m_cmd_export";
+            this.m_cmd_export.Primary = true;
+            this.m_cmd_export.Size = new System.Drawing.Size(167, 60);
+            this.m_cmd_export.TabIndex = 4;
+            this.m_cmd_export.Text = "Xuất báo cáo";
+            this.m_cmd_export.UseVisualStyleBackColor = true;
+            this.m_cmd_export.Click += new System.EventHandler(this.m_cmd_export_Click);
+            // 
             // m_grc_lc_hn
             // 
             this.m_grc_lc_hn.Cursor = System.Windows.Forms.Cursors.Default;
@@ -342,7 +358,7 @@
             this.m_grc_lc_hn.Location = new System.Drawing.Point(0, 50);
             this.m_grc_lc_hn.MainView = this.gridView2;
             this.m_grc_lc_hn.Name = "m_grc_lc_hn";
-            this.m_grc_lc_hn.Size = new System.Drawing.Size(389, 390);
+            this.m_grc_lc_hn.Size = new System.Drawing.Size(389, 330);
             this.m_grc_lc_hn.TabIndex = 2;
             this.m_grc_lc_hn.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -362,9 +378,21 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9});
+            gridFormatRule2.Column = this.gridColumn9;
+            gridFormatRule2.ColumnApplyTo = this.gridColumn9;
+            gridFormatRule2.Name = "Format0";
+            formatConditionRuleValue2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            formatConditionRuleValue2.Appearance.ForeColor = System.Drawing.Color.Red;
+            formatConditionRuleValue2.Appearance.Options.UseFont = true;
+            formatConditionRuleValue2.Appearance.Options.UseForeColor = true;
+            formatConditionRuleValue2.Condition = DevExpress.XtraEditors.FormatCondition.Equal;
+            formatConditionRuleValue2.Value1 = "HẾT";
+            gridFormatRule2.Rule = formatConditionRuleValue2;
+            this.gridView2.FormatRules.Add(gridFormatRule2);
             this.gridView2.GridControl = this.m_grc_lc_hn;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsBehavior.Editable = false;
+            this.gridView2.OptionsMenu.ShowConditionalFormattingItem = true;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             this.gridView2.PaintStyleName = "Web";
             // 
@@ -425,7 +453,6 @@
             this.Name = "F300_ThongKeVe";
             this.Text = "F300_ThongKeVe";
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc_hn_lc)).EndInit();
@@ -433,6 +460,7 @@
             this.panel5.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.m_grc_lc_hn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);

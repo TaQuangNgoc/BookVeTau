@@ -89,7 +89,7 @@ namespace BookVeTau
                 {
                     luu_thong_tin();
                     XtraMessageBox.Show("Lưu thành công!");
-                    xoa_trang_trang();
+                    //xoa_trang_trang();
                    
                 }
             }
@@ -383,11 +383,11 @@ namespace BookVeTau
             if (m_cb_vip.Checked == true)
             {
                 m_txt_so_ve.Text = "2";
-                m_txt_so_ve.Enabled = false;
+                //m_txt_so_ve.Enabled = false;
             }
             else
             {
-                m_txt_so_ve.Enabled = true;
+                //m_txt_so_ve.Enabled = true;
             }
         }
     }

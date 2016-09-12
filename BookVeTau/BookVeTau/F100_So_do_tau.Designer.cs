@@ -4054,20 +4054,20 @@
             this.commandBarGalleryDropDown1.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown1.Gallery.ColumnCount = 1;
             this.commandBarGalleryDropDown1.Gallery.DrawImageBackground = false;
-            galleryItem1.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.None;
-            galleryItem2.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Thin;
-            galleryItem3.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Hair;
-            galleryItem4.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Dotted;
-            galleryItem5.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Dashed;
-            galleryItem6.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.DashDot;
-            galleryItem7.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.DashDotDot;
-            galleryItem8.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Double;
-            galleryItem9.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Medium;
-            galleryItem10.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.MediumDashed;
-            galleryItem11.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.MediumDashDot;
-            galleryItem12.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.MediumDashDotDot;
-            galleryItem13.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.SlantDashDot;
-            galleryItem14.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Thick;
+            //galleryItem1.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.None;
+            //galleryItem2.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Thin;
+            //galleryItem3.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Hair;
+            //galleryItem4.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Dotted;
+            //galleryItem5.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Dashed;
+            //galleryItem6.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.DashDot;
+            //galleryItem7.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.DashDotDot;
+            //galleryItem8.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Double;
+            //galleryItem9.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Medium;
+            //galleryItem10.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.MediumDashed;
+            //galleryItem11.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.MediumDashDot;
+            //galleryItem12.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.MediumDashDotDot;
+            //galleryItem13.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.SlantDashDot;
+            //galleryItem14.Tag = DevExpress.XtraSpreadsheet.Model.ModelBorderLineStyle.Thick;
             galleryItemGroup2.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
             galleryItem1,
             galleryItem2,
